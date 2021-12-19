@@ -188,3 +188,24 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Package Armvirt as OpenWrt
+      uses: unifreq/openwrt_packit@master
+      env:
+        OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
+        PACKAGE_SOC: s905d
+        KERNEL_VERSION_NAME: 5.4.167
+
+    - name: Upload OpenWrt Firmware to Release
+      uses: ncipollo/release-action@v1
+      with:
+        tag: openwrt_armvirt_v8_${{ env.PACKAGED_OUTPUTDATE }}
+        artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
+        allowUpdates: true
+        token: ${{ secrets.GITHUB_TOKEN }}
+        body: |
+          This is OpenWrt firmware for Armvirt 64
+          * Firmware information
+          Default IP: 10.10.10.1
+          Default username: root
+          Default password: password
