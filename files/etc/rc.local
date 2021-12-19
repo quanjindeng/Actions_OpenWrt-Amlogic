@@ -2,6 +2,7 @@
 # the system init finished. By default this file does nothing.
 
 /usr/sbin/balethirq.pl
+/etc/first_run.sh >/root/first_run.log 2>&1
 
 # 修复在某些docker环境下网络卡顿的问题, 如果非必要请勿删除!
 cat > /etc/resolv.conf <<EOF
