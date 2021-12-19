@@ -27,6 +27,7 @@ uci commit network                                                          # �
 #uci commit dhcp                                                             # 跟‘关闭DHCP功能’联动,同时启用或者删除跟注释
 uci set system.@system[0].hostname='OpenWrt-N1'                             # 修改主机名称为Phicomm-N1
 sed -i 's/\/bin\/login/\/bin\/login -f root/' /etc/config/ttyd             # 设置ttyd免帐号登录，如若开启，进入OPENWRT后可能要重启一次才生效
+sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow    # 设置密码为空
 EOF
 
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
@@ -43,9 +44,6 @@ sed -i "s/OpenWrt /Deng Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" p
 
 # Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.31.4）
 #sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
-
-# Modify default root's password（FROM 'password'[$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.] CHANGE TO 'your password'）  # 设置密码为空
-sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 
 # Replace the default software source
 # sed -i 's#openwrt.proxy.ustclug.org#mirrors.bfsu.edu.cn\\/openwrt#' package/lean/default-settings/files/zzz-default-settings
