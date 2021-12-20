@@ -43,7 +43,7 @@ sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/auto
 sed -i "s/OpenWrt /Deng Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.31.4）
-#sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # Replace the default software source
 # sed -i 's#openwrt.proxy.ustclug.org#mirrors.bfsu.edu.cn\\/openwrt#' package/lean/default-settings/files/zzz-default-settings
