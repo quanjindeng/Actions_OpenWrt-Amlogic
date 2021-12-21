@@ -50,6 +50,11 @@ sed -i "s/OpenWrt /Deng Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" p
 # sed -i 's#openwrt.proxy.ustclug.org#mirrors.bfsu.edu.cn\\/openwrt#' package/lean/default-settings/files/zzz-default-settings
 
 
+# 删除重复包
+
+rm -rf package/lean/luci-app-openvpn-server
+rm -rf package/lean/luci-app-wrtbwmon
+
 # 拉取软件包
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 git clone https://github.com/kenzok8/small-package package/small-package && rm -rf package/small-package/luci-app-bypass && rm -rf package/small-package/lua-maxminddb
