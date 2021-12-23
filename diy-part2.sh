@@ -63,6 +63,7 @@ git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-
 
 rm -rf package/lean/luci-app-openvpn-server
 rm -rf package/small-package/luci-app-wrtbwmon
+rm -rf package/small-package/wrtbwmon
 rm -rf package/small-package/UnblockNeteaseMusic
 rm -rf package/lean/UnblockNeteaseMusic-Go
 rm -rf package/lean/UnblockNeteaseMusic
