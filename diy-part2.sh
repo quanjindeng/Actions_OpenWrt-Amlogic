@@ -49,12 +49,6 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 # Replace the default software source
 # sed -i 's#openwrt.proxy.ustclug.org#mirrors.bfsu.edu.cn\\/openwrt#' package/lean/default-settings/files/zzz-default-settings
 
-
-# 删除重复包
-
-rm -rf package/lean/luci-app-openvpn-server
-rm -rf package/lean/luci-app-wrtbwmon
-
 # 拉取软件包
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 git clone https://github.com/kenzok8/small-package package/small-package && rm -rf package/small-package/luci-app-bypass && rm -rf package/small-package/lua-maxminddb
@@ -63,3 +57,14 @@ git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/luci-app-gowebdav package/luci-app-gowebdav
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebdav package/gowebdav
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
+
+
+# 删除重复包
+
+rm -rf package/lean/luci-app-openvpn-server
+rm -rf package/small-package/luci-app-wrtbwmon
+rm -rf package/small-package/UnblockNeteaseMusic
+rm -rf package/lean/UnblockNeteaseMusic-Go
+rm -rf package/lean/UnblockNeteaseMusic
+rm -rf package/lean/luci-app-unblockmusic
+rm -rf package/lean/luci-app-netdata
