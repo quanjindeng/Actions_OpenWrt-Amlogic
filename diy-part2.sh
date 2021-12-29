@@ -69,3 +69,4 @@ rm -rf package/lean/UnblockNeteaseMusic-Go
 rm -rf package/lean/UnblockNeteaseMusic
 rm -rf package/lean/luci-app-unblockmusic
 rm -rf package/lean/luci-app-netdata
+rm -rf package/small-package/luci-app-koolproxyR
