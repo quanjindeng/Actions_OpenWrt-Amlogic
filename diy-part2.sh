@@ -57,7 +57,7 @@ git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/luci-app-gowebdav package/luci-app-gowebdav
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebdav package/gowebdav
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
-
+git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 
 # 删除重复包
 
