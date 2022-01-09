@@ -58,7 +58,7 @@ svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/luci-ap
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebdav package/gowebdav
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
-git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
+git clone https://github.com/aakkll/luci-theme-neobird.git package/luci-theme-neobird
 
 # 删除重复包
 
