@@ -59,6 +59,8 @@ svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebda
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 git clone https://github.com/aakkll/luci-theme-neobird.git package/luci-theme-neobird
+svn co https://github.com/NueXini/NueXini_Packages/trunk/luci-app-unblockneteasemusic-go package/luci-app-unblockneteasemusic-go
+svn co https://github.com/NueXini/NueXini_Packages/trunk/UnblockNeteaseMusic-Go package/UnblockNeteaseMusic-Go
 
 # 删除重复包
 
