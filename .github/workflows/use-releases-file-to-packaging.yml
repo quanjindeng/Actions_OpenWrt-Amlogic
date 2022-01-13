@@ -52,16 +52,16 @@ jobs:
       if: (!cancelled())
       run: |
         [ -d openwrt-armvirt ] || mkdir -p openwrt-armvirt
-        curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases" | grep -o "openwrt_armvirt_${{ env.RELEASES_BRANCH }}.*/openwrt-armvirt-.*.tar.gz" | head -n 1 > DOWNLOAD_ARMVIRT
+        curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases" | grep -o "openwrt_armvirt_.*/openwrt-armvirt-.*\.tar.gz" | head -n 1 > DOWNLOAD_ARMVIRT
         [ -s DOWNLOAD_ARMVIRT ] && wget -q -P openwrt-armvirt https://github.com/${GITHUB_REPOSITORY}/releases/download/$(cat DOWNLOAD_ARMVIRT)
     
     - name: Package Armvirt as OpenWrt
       uses: unifreq/openwrt_packit@master
       env:
         WHOAMI: deng
-        OPENWRT_ARMVIRT: *.tar.gz
+        OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
-        KERNEL_VERSION_NAME: 5.4.168_5.15.11
+        KERNEL_VERSION_NAME: 5.4.168_5.15.15
 
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@v1
