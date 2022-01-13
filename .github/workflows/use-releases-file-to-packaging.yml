@@ -61,7 +61,7 @@ jobs:
         WHOAMI: deng
         OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
-        KERNEL_VERSION_NAME: 5.4.168_5.15.15
+        KERNEL_VERSION_NAME: 5.4.168_5.15.12
 
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@v1
