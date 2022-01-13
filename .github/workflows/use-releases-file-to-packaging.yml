@@ -1,0 +1,83 @@
+#========================================================================================================================
+# https://github.com/ophub/amlogic-s9xxx-openwrt
+# Description: Use Releases file to packaging
+# Cron: min (0 - 59) / hour (0 - 23) / day of month (1 - 31) / month (1 - 12) / day of week (0 - 6)(Sunday - Saturday)
+#========================================================================================================================
+
+name: Use Releases file to Packaging
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Select Branch [ official / lede ]'
+        required: false
+        default: 'lede'
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    if: github.event.repository.owner.id == github.event.sender.id
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Initialization environment
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        sudo -E apt-get -qq update
+        sudo -E apt-get -qq install $(curl -fsSL git.io/ubuntu-2004-openwrt)
+        sudo -E apt-get -qq autoremove --purge
+        sudo -E apt-get -qq clean
+        sudo timedatectl set-timezone "$TZ"
+        # Input value validation
+        ARR_BRANCH=("official" "lede")
+        if [[ -n "${{ github.event.inputs.branch }}" && -n "$(echo "${ARR_BRANCH[@]}" | grep -w "${{ github.event.inputs.branch }}")" ]]; then
+           RELEASES_BRANCH=${{ github.event.inputs.branch }}
+        else
+           RELEASES_BRANCH=lede
+        fi
+        echo "RELEASES_BRANCH=${RELEASES_BRANCH}" >> $GITHUB_ENV
+        echo "COMPILE_STARTINGTIME=$(date +"%Y.%m.%d.%H%M")" >> $GITHUB_ENV
+        
+    - name: Build OpenWrt firmware
+      id: build
+      if: (!cancelled())
+      run: |
+        [ -d openwrt-armvirt ] || mkdir -p openwrt-armvirt
+        curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases" | grep -o "openwrt_s9xxx_${{ env.RELEASES_BRANCH }}.*/openwrt-armvirt-.*.tar.gz" | head -n 1 > DOWNLOAD_ARMVIRT
+        [ -s DOWNLOAD_ARMVIRT ] && wget -q -P openwrt-armvirt https://github.com/${GITHUB_REPOSITORY}/releases/download/$(cat DOWNLOAD_ARMVIRT)
+    
+    - name: Package Armvirt as OpenWrt
+      uses: unifreq/openwrt_packit@master
+      env:
+        WHOAMI: deng
+        OPENWRT_ARMVIRT: *.tar.gz
+        PACKAGE_SOC: s905d
+        KERNEL_VERSION_NAME: 5.4.168_5.15.11
+
+    - name: Upload OpenWrt Firmware to Release
+      uses: ncipollo/release-action@v1
+      with:
+        tag: openwrt_armvirt_v8_${{ env.PACKAGED_OUTPUTDATE }}
+        artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
+        allowUpdates: true
+        token: ${{ secrets.GITHUB_TOKEN }}
+        body: |
+          This is OpenWrt firmware for Armvirt 64
+          * Firmware information
+          Default IP: 10.10.10.1
+          Default username: root
+          Default password: password
+          #####旁路网关设置#####
+          如果你的电视盒子以旁路网关的方式运行，你可以根据需要在防火墙中添加路由规则 (网络 → 防火墙 → 自定义路由规则):
+          iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE        #If the interface is eth0.
+          iptables -t nat -I POSTROUTING -o br-lan -j MASQUERADE      #If the interface is br-lan bridged.
+          规则二选一，根据接口名称定。
