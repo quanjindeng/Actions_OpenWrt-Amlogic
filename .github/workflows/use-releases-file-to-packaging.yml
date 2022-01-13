@@ -80,4 +80,5 @@ jobs:
           如果你的电视盒子以旁路网关的方式运行，你可以根据需要在防火墙中添加路由规则 (网络 → 防火墙 → 自定义路由规则):
           iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE        #If the interface is eth0.
           iptables -t nat -I POSTROUTING -o br-lan -j MASQUERADE      #If the interface is br-lan bridged.
-          规则二选一，根据接口名称定。
+          iptables -t nat -I POSTROUTING -o lan -j MASQUERADE      #If the interface is lan bridged.
+          规则选择其中一条，根据接口名称定。
