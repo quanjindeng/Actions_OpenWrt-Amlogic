@@ -178,21 +178,6 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
-      with:
-        retain_days: 1
-        keep_minimum_runs: 3
-
-    - name: Remove old Releases
-      uses: dev-drprasad/delete-older-releases@v0.1.0
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-      with:
-        keep_latest: 3
-        delete_tags: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
     - name: Package Armvirt as OpenWrt
       uses: unifreq/openwrt_packit@master
       env:
@@ -222,7 +207,6 @@ jobs:
           规则选择其中一条，根据接口名称定。
 
     - name: 清理Actions空间
-      if: env.REPO_TOKEN
       uses: Mattraks/delete-workflow-runs@main
       with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -232,7 +216,6 @@ jobs:
           #retain_days: ${{ github.event.inputs.action_days }}
     
     - name: 删除releases
-      if: env.REPO_TOKEN
       uses: dev-drprasad/delete-older-releases@master
       with:
         repo: ${{ github.repository }}
