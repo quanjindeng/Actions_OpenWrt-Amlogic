@@ -13,12 +13,10 @@ name: Build OpenWrt
 on:
   repository_dispatch:
   workflow_dispatch:
+
   schedule:
     - cron: 0 16 */5 * *
-  action_days:
-        description: '清理[X]天之前的Actions空间操作记录(可改)'
-        required: true
-        default: '7'
+  
   rele:
         description: '保留[X]个Releases不被删除(可改)'
         required: true
@@ -235,7 +233,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 0
-          retain_days: ${{ github.event.inputs.action_days }}
+          retain_days: 7
+          #retain_days: ${{ github.event.inputs.action_days }}
     
     - name: 删除releases
       if: env.REPO_TOKEN
