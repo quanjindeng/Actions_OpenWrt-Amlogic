@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: 0 16 */5 * *
-  days:
+  action_days:
         description: '清理[X]天之前的Actions空间操作记录(可改)'
         required: true
         default: '7'
@@ -235,7 +235,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 0
-          retain_days: ${{ github.event.inputs.days }}
+          retain_days: ${{ github.event.inputs.action_days }}
     
     - name: 删除releases
       if: env.REPO_TOKEN
