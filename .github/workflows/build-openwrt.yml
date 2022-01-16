@@ -16,11 +16,6 @@ on:
 
   schedule:
     - cron: 0 16 */5 * *
-  
-  rele:
-        description: '保留[X]个Releases不被删除(可改)'
-        required: true
-        default: '5'  
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -241,7 +236,8 @@ jobs:
       uses: dev-drprasad/delete-older-releases@master
       with:
         repo: ${{ github.repository }}
-        keep_latest: ${{ github.event.inputs.rele }}
+        keep_latest: 5
+        #keep_latest: ${{ github.event.inputs.rele }}
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
