@@ -15,7 +15,14 @@ on:
   workflow_dispatch:
   schedule:
     - cron: 0 16 */5 * *
-    
+  days:
+        description: '清理[X]天之前的Actions空间操作记录(可改)'
+        required: true
+        default: '7'
+  rele:
+        description: '保留[X]个Releases不被删除(可改)'
+        required: true
+        default: '5'  
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -220,3 +227,22 @@ jobs:
           iptables -t nat -I POSTROUTING -o br-lan -j MASQUERADE      #If the interface is br-lan bridged.
           iptables -t nat -I POSTROUTING -o lan -j MASQUERADE      #If the interface is lan bridged.
           规则选择其中一条，根据接口名称定。
+
+    - name: 清理Actions空间
+      if: env.REPO_TOKEN
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+          token: ${{ secrets.REPO_TOKEN }}
+          repository: ${{ github.repository }}
+          keep_minimum_runs: 0
+          retain_days: ${{ github.event.inputs.days }}
+    
+    - name: 删除releases
+      if: env.REPO_TOKEN
+      uses: dev-drprasad/delete-older-releases@master
+      with:
+        repo: ${{ github.repository }}
+        keep_latest: ${{ github.event.inputs.rele }}
+        delete_tags: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
