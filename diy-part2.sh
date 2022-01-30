@@ -59,7 +59,7 @@ svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebda
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
-git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+#git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 
 
 # 删除重复包
@@ -68,9 +68,9 @@ rm -rf package/lean/luci-app-openvpn-server
 rm -rf package/small-package/luci-app-wrtbwmon
 rm -rf package/small-package/wrtbwmon
 rm -rf package/small-package/UnblockNeteaseMusic
-rm -rf package/lean/UnblockNeteaseMusic-Go
-rm -rf package/lean/UnblockNeteaseMusic
-rm -rf package/lean/luci-app-unblockmusic
+#rm -rf package/lean/UnblockNeteaseMusic-Go
+#rm -rf package/lean/UnblockNeteaseMusic
+#rm -rf package/lean/luci-app-unblockmusic
 rm -rf package/lean/luci-app-netdata
 rm -rf package/small-package/luci-app-koolproxyR
 rm -rf package/small-package/luci-app-godproxy
