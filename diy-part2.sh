@@ -10,7 +10,7 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-
+######## 备用 ########
 # 修改IP项的EOF于EOF之间请不要插入其他扩展代码，可以删除或注释里面原本的代码
 # 如果你的OP是当主路由的话，网关、DNS、广播都不需要，代码前面加 # 注释掉，只保留后台地址和子网掩码就可以
 # 如果你有编译ipv6的话，‘去掉LAN口使用内置的 IPv6 管理’代码前面也加 # 注释掉
@@ -28,6 +28,9 @@ uci commit network                                                          # �
 uci set system.@system[0].hostname='OpenWrt-N1'                             # 修改主机名称为Phicomm-N1
 sed -i 's/\/bin\/login/\/bin\/login -f root/' /etc/config/ttyd             # 设置ttyd免帐号登录，如若开启，进入OPENWRT后可能要重启一次才生效
 EOF
+######## 备用 ########
+
+
 
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings    # 设置密码为空
 
@@ -59,7 +62,7 @@ svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebda
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
-#git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 
 
 # 删除重复包
@@ -68,9 +71,9 @@ rm -rf package/lean/luci-app-openvpn-server
 rm -rf package/small-package/luci-app-wrtbwmon
 rm -rf package/small-package/wrtbwmon
 rm -rf package/small-package/UnblockNeteaseMusic
-#rm -rf package/lean/UnblockNeteaseMusic-Go
-#rm -rf package/lean/UnblockNeteaseMusic
-#rm -rf package/lean/luci-app-unblockmusic
+rm -rf package/lean/UnblockNeteaseMusic-Go
+rm -rf package/lean/UnblockNeteaseMusic
+rm -rf package/lean/luci-app-unblockmusic
 rm -rf package/lean/luci-app-netdata
 rm -rf package/small-package/luci-app-koolproxyR
 rm -rf package/small-package/luci-app-godproxy
