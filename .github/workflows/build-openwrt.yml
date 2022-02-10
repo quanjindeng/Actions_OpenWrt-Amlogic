@@ -207,6 +207,11 @@ jobs:
           iptables -t nat -I POSTROUTING -o br-lan -j MASQUERADE      #If the interface is br-lan bridged.
           iptables -t nat -I POSTROUTING -o lan -j MASQUERADE      #If the interface is lan bridged.
           规则选择其中一条，根据接口名称定。
+          ####################
+          注意：部分设备在刷入emmc后更新固件后可能出现无法拨号或全锥型NAT无法启用的问题！
+          解决办法是再刷一遍固件（即确保当前系统分区/dev/mmcblk2p3）。
+          目前已知只有N1小概率出现这个问题，据tg群消息了解，其他作者的固件也存在这个问题。
+          具体原因未知，在日志里可以看到内核报错，无法创建网络接口之类的消息。
 
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
