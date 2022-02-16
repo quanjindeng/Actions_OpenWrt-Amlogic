@@ -38,7 +38,7 @@ sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-defaul
 sed -i 's/luci-theme-bootstrap/luci-theme-argon-lr/g' ./feeds/luci/collections/luci/Makefile
 
 # Modify some code adaptation
-sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
+sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' feeds/luci/applications/luci-app-cpufreq/Makefile
 
 # Add autocore support for armvirt
 sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/autocore/Makefile
@@ -57,7 +57,7 @@ sed -i 's/OpenWrt/OpenWrt-N1/g' package/base-files/files/bin/config_generate
 
 # 拉取软件包
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
-git clone https://github.com/kenzok8/small-package package/small-package && rm -rf package/small-package/luci-app-bypass && rm -rf package/small-package/lua-maxminddb
+git clone https://github.com/kenzok8/small-package package/small-package && rm -rf package/small-package/luci-app-bypass && rm -rf package/small-package/lua-maxminddb && rm -rf package/small-package/luci-app-openvpn-server && rm -rf package/small-package/openvpn-easy-rsa-whisky
 git clone https://github.com/kiddin9/openwrt-bypass.git package/openwrt-bypass
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/luci-app-gowebdav package/luci-app-gowebdav
@@ -70,13 +70,8 @@ git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.gi
 
 # 删除重复包
 
-rm -rf package/lean/luci-app-openvpn-server
 rm -rf package/small-package/luci-app-wrtbwmon
 rm -rf package/small-package/wrtbwmon
 rm -rf package/small-package/UnblockNeteaseMusic
-rm -rf package/lean/UnblockNeteaseMusic-Go
-rm -rf package/lean/UnblockNeteaseMusic
-rm -rf package/lean/luci-app-unblockmusic
-rm -rf package/lean/luci-app-netdata
 rm -rf package/small-package/luci-app-koolproxyR
 rm -rf package/small-package/luci-app-godproxy
