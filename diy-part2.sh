@@ -57,19 +57,23 @@ sed -i 's/OpenWrt/OpenWrt-N1/g' package/base-files/files/bin/config_generate
 
 # 拉取软件包
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
-git clone https://github.com/kenzok8/small-package package/small-package && rm -rf package/small-package/luci-app-bypass && rm -rf package/small-package/lua-maxminddb && rm -rf package/small-package/luci-app-openvpn-server && rm -rf package/small-package/openvpn-easy-rsa-whisky
+git clone https://github.com/kenzok8/small-package package/small-package
 git clone https://github.com/kiddin9/openwrt-bypass.git package/openwrt-bypass
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/luci-app-gowebdav package/luci-app-gowebdav
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebdav package/gowebdav
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
-git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
 git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 
 
 # 删除重复包
 
+rm -rf feeds/luci/applications/luci-app-netdata
+rm -rf package/small-package/luci-app-bypass
+rm -rf package/small-package/lua-maxminddb
+rm -rf package/small-package/luci-app-openvpn-server
+rm -rf package/small-package/openvpn-easy-rsa-whisky
 rm -rf package/small-package/luci-app-wrtbwmon
 rm -rf package/small-package/wrtbwmon
 rm -rf package/small-package/UnblockNeteaseMusic
