@@ -201,14 +201,11 @@ jobs:
           Default IP: 10.10.10.1
           Default username: root
           Default password: password
-          #####旁路网关设置#####
-          如果你的电视盒子以旁路网关的方式运行，你可以根据需要在防火墙中添加路由规则 (网络 → 防火墙 → 自定义路由规则):
-          iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE        #If the interface is eth0.
-          iptables -t nat -I POSTROUTING -o br-lan -j MASQUERADE      #If the interface is br-lan bridged.
-          iptables -t nat -I POSTROUTING -o lan -j MASQUERADE      #If the interface is lan bridged.
-          规则选择其中一条，根据接口名称定。
           ####################
-          提示：
+          加入多拨功能，新增aria2及qbittorrent下载插件、几个VPN服务插件
+          70+o、70+版本变动较多，强烈建议使用U盘进行一次重刷！
+          ####################
+          引用flippy的提示：
           N1固件，从版本69开始， 把 mmcblk2p2、mmcblk2p3、mmcblk2p4的分区起始位置依次向后偏移了4MB,经测试已修复BTRFS csum failed BUG，此BUG会导致不能拨号，科学不正常，不能turbo acc加速等多种问题，必须按下列方法解决（2选1）
           1. 由于分区布局发生了变化，必须通过U盘启动全新刷机才算是真正修复
           2. 不想重刷的，在线升级后用df -h /查看所在的分区，如果在mmcblk2p2上的，需要再升级一次，保证rootfs在mmcblk2p3分区上才能避免 btrfs csum failed
