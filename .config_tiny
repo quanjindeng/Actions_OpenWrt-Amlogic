@@ -1657,8 +1657,8 @@ CONFIG_PACKAGE_netdata=y
 #
 # Derry Apps
 #
-CONFIG_PACKAGE_appfilter=y
-CONFIG_PACKAGE_kmod-oaf=y
+# CONFIG_PACKAGE_appfilter is not set
+# CONFIG_PACKAGE_kmod-oaf is not set
 # end of Derry Apps
 
 #
@@ -2572,7 +2572,7 @@ CONFIG_ZRAM_DEF_COMP_LZORLE=y
 #
 # Sound Support
 #
-CONFIG_PACKAGE_kmod-sound-core=y
+# CONFIG_PACKAGE_kmod-sound-core is not set
 # CONFIG_PACKAGE_kmod-ac97 is not set
 # CONFIG_PACKAGE_kmod-sound-dummy is not set
 # CONFIG_PACKAGE_kmod-sound-ens1371 is not set
@@ -4145,7 +4145,7 @@ CONFIG_PACKAGE_libopenssl-conf=y
 # end of libimobiledevice
 
 # CONFIG_PACKAGE_acsccid is not set
-CONFIG_PACKAGE_alsa-lib=y
+# CONFIG_PACKAGE_alsa-lib is not set
 # CONFIG_PACKAGE_argp-standalone is not set
 CONFIG_PACKAGE_bind-libs=y
 # CONFIG_PACKAGE_bluez-libs is not set
@@ -4923,7 +4923,7 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray=y
 CONFIG_PACKAGE_luci-app-pushbot=y
 # CONFIG_PACKAGE_luci-app-qbittorrent is not set
 # CONFIG_PACKAGE_luci-app-qbittorrent_static is not set
-CONFIG_PACKAGE_luci-app-qbittorrent_dynamic=y
+# CONFIG_PACKAGE_luci-app-qbittorrent_dynamic is not set
 # CONFIG_PACKAGE_luci-app-qos is not set
 # CONFIG_PACKAGE_luci-app-quickstart is not set
 # CONFIG_PACKAGE_luci-app-radicale is not set
@@ -6614,7 +6614,7 @@ CONFIG_PACKAGE_xray-core=y
 # CONFIG_PACKAGE_aserver is not set
 # CONFIG_PACKAGE_espeak is not set
 # CONFIG_PACKAGE_faad2 is not set
-CONFIG_PACKAGE_fdk-aac=y
+# CONFIG_PACKAGE_fdk-aac is not set
 
 #
 # Configuration
