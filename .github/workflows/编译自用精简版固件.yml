@@ -1,6 +1,9 @@
 name: 编译自用精简版固件
 
 on:
+  repository_dispatch:
+  workflow_dispatch:
+
   schedule:
     - cron: 0 16 4,9,14,19,24,30 * *
 
