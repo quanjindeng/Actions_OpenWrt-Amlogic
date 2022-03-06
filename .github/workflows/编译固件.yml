@@ -133,8 +133,7 @@ jobs:
           默认用户名: root
           默认密码: password
           * **更新说明：**
-          加入多拨功能，新增aria2及qbittorrent下载插件、几个VPN服务插件
-          70+o、70+版本变动较多，强烈建议使用U盘进行一次重刷！
+          目前已集成大部分常用插件！
           * **N1云编译OP固件互助交流：**
           https://t.me/OpenWrt_n1
 
