@@ -61,17 +61,5 @@ echo "-----------------------------硬盘信息---------------------------------
 echo -e  "硬盘数量：$(ls /dev/sd* | grep -v [1-9] | wc -l) \n"
 
 echo "硬盘详细信息"
-lshw -short -C disk
-
-echo " Raid卡信息"
-lspci -v | grep -i Infiniband
-echo -e "\n"
-
-echo "-----------------------------网卡信息----------------------------------------------"
-echo -e "网卡数量:$(lspci | grep Ethernet | wc -l)个\n"
-echo "网卡详细信息"
-lspci | grep Ethernet
-echo -e "\n"
-
-echo "IB卡信息"
-lspci -v | grep Infiniband
+sudo lshw -short -C disk
+df -Th
