@@ -31,20 +31,3 @@ ulimit -s unlimited
 ulimit -t unlimited
 ulimit -v unlimited
 
-## 检查服务器信息
-
-echo -e "-------------- ------------CPU信息------------------------------------------\n"
-echo "CPU物理数量:$(cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l)"
-
-echo -e "CPU核心及版本信息：$(cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c) \n"
-
-echo "-------------------------------内存信息-------------------------------------------"
-
-echo "已安装内存详细信息："
-sudo lshw -short -C memory | grep GiB
-echo -e "\n"
-
-echo "-----------------------------硬盘信息---------------------------------------------"
-echo -e  "硬盘数量：$(ls /dev/sd* | grep -v [1-9] | wc -l) \n"
-
-df -Th
