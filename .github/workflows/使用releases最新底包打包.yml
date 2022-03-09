@@ -73,10 +73,13 @@ jobs:
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          This is OpenWrt firmware for Armvirt 64
-          * Firmware information
-          Default IP: 10.10.10.1
-          Default username: root
-          Default password: password
-          
+          ### **适用于Amlogic盒子的OpenWrt固件**
+          * **固件信息：**
+          默认IP: 10.10.10.1
+          默认用户名: root
+          默认密码: password
+          * **更新说明：**
+          目前已集成大部分常用插件！
+          * **N1云编译OP固件互助交流：**
+          https://t.me/OpenWrt_n1
           
