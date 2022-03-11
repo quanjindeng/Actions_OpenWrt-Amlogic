@@ -1,0 +1,48 @@
+#========================================================================================================================
+# https://github.com/ophub/amlogic-s9xxx-openwrt
+# Description: Use Releases file to packaging
+# Cron: min (0 - 59) / hour (0 - 23) / day of month (1 - 31) / month (1 - 12) / day of week (0 - 6)(Sunday - Saturday)
+#========================================================================================================================
+
+name: 使用releases精简版底包打包
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Get OpenWrt firmware
+      id: build
+      if: (!cancelled())
+      run: |
+        [ -d openwrt-N1 ] || mkdir -p openwrt-N1
+        curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases" | grep -o "openwrt_N1_.*/openwrt-N1-.*\.tar.gz" | head -n 1 > DOWNLOAD_N1
+        [ -s DOWNLOAD_N1 ] && wget -q -P openwrt-N1 https://github.com/${GITHUB_REPOSITORY}/releases/download/$(cat DOWNLOAD_N1)
+    
+    - name: Package Armvirt as OpenWrt
+      uses: unifreq/openwrt_packit@master
+      env:
+        WHOAMI: deng
+        OPENWRT_N1: openwrt-N1/*.tar.gz
+        PACKAGE_SOC: s905d
+       # KERNEL_AUTO_LATEST: false
+        KERNEL_REPO_URL: https://github.com/ophub/kernel/tree/main/pub/stable
+        KERNEL_VERSION_NAME: 5.16.12
+
+    - name: Upload OpenWrt Firmware to Release
+      uses: ncipollo/release-action@v1
+      with:
+        tag: openwrt_N1_${{ env.PACKAGED_OUTPUTDATE }}
+        artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
+        allowUpdates: true
+        token: ${{ secrets.GITHUB_TOKEN }}
+        body: |
+          自用精简版固件，勿下！
+          
