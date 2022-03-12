@@ -57,7 +57,9 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba4/files/smb.conf.template
 
+
 # 拉取软件包
+
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 git clone https://github.com/kenzok8/small-package package/small-package
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
@@ -68,7 +70,7 @@ git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-
 
 # 删除重复包
 
-rm -rf feeds/luci/applications/luci-app-netdata
+# rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf package/small-package/luci-app-openvpn-server
 rm -rf package/small-package/openvpn-easy-rsa-whisky
 rm -rf package/small-package/luci-app-wrtbwmon
