@@ -35,7 +35,7 @@ EOF
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings    # 设置密码为空
 
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon-lr/g' ./feeds/luci/collections/luci/Makefile
 
 # Modify some code adaptation
 sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' feeds/luci/applications/luci-app-cpufreq/Makefile
@@ -71,7 +71,7 @@ git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-
 # 删除重复包
 
 # rm -rf feeds/luci/applications/luci-app-netdata
-rm -rf feeds/luci/themes/luci-theme-argon
+# rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf package/small-package/luci-app-openvpn-server
 rm -rf package/small-package/openvpn-easy-rsa-whisky
 rm -rf package/small-package/luci-app-wrtbwmon
