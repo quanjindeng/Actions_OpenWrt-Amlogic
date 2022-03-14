@@ -71,6 +71,7 @@ git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-
 # 删除重复包
 
 # rm -rf feeds/luci/applications/luci-app-netdata
+rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf package/small-package/luci-app-openvpn-server
 rm -rf package/small-package/openvpn-easy-rsa-whisky
 rm -rf package/small-package/luci-app-wrtbwmon
