@@ -66,7 +66,7 @@ git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/luci-app-gowebdav package/luci-app-gowebdav
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebdav package/gowebdav
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
-
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # 删除重复包
 
@@ -78,7 +78,7 @@ rm -rf package/small-package/luci-app-wrtbwmon
 rm -rf package/small-package/wrtbwmon
 rm -rf package/small-package/luci-app-koolproxyR
 rm -rf package/small-package/luci-app-godproxy
-# rm -rf package/small-package/luci-theme-argon-lr
+rm -rf package/small-package/luci-app-argon-config
 
 
 # 其他调整
