@@ -30,7 +30,7 @@ jobs:
       uses: unifreq/openwrt_packit@master
       env:
         WHOAMI: deng
-        OPENWRT_N1: openwrt-armvirt/*.tar.gz
+        OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
        # KERNEL_AUTO_LATEST: false
        # KERNEL_REPO_URL: https://github.com/ophub/kernel/tree/main/pub/stable
