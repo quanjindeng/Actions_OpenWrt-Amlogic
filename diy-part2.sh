@@ -67,6 +67,7 @@ svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/luci-ap
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebdav package/gowebdav
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+git clone https://github.com/Carseason/openwrt-themedog.git package/openwrt-themedog
 
 # 删除重复包
 
