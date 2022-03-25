@@ -79,6 +79,7 @@ rm -rf package/small-package/wrtbwmon
 rm -rf package/small-package/luci-app-koolproxyR
 rm -rf package/small-package/luci-app-godproxy
 rm -rf package/small-package/luci-app-argon-config
+rm -rf package/small-package/luci-app-amlogic
 
 
 # 其他调整
