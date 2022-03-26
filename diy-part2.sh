@@ -66,7 +66,7 @@ git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/luci-app-gowebdav package/luci-app-gowebdav
 svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebdav package/gowebdav
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-app-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 
 # 删除重复包
