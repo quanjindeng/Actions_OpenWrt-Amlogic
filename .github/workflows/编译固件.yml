@@ -151,9 +151,7 @@ jobs:
           默认用户名: root
           默认密码: password
           * **更新说明：**
-          目前已集成大部分常用插件！
-          * **N1云编译OP固件互助交流：**
-          https://t.me/OpenWrt_n1
+          个人自用，插件只有passwall、openclash、docker、网易云音乐解锁、USB打印共享这几个
 
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
