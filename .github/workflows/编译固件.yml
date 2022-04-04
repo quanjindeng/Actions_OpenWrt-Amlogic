@@ -39,7 +39,7 @@ jobs:
         echo "警告⚠"
         echo "若分配的服务器性能不足，务必及时取消，重新运行！"
         echo "已知编译成功CPU型号：8370C,8171M"
-        echo "已知性能不足CPU型号：8272CL"
+        echo "已知性能不足CPU型号：8272CL,E5系列"
         echo "--------------------------CPU信息--------------------------"
         echo "CPU物理数量:$(cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l)"
         echo -e "CPU核心及版本信息：$(cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c) \n"
@@ -135,7 +135,7 @@ jobs:
         PACKAGE_SOC: s905d
        # KERNEL_AUTO_LATEST: false
        # KERNEL_REPO_URL: https://github.com/ophub/kernel/tree/main/pub/stable
-        KERNEL_VERSION_NAME: 5.4.174_5.15.17_5.16.3
+        KERNEL_VERSION_NAME: 5.4.174_5.15.17_5.17.1
 
     - name: 发布固件
       uses: ncipollo/release-action@v1
