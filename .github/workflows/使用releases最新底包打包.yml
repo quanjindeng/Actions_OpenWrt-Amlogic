@@ -45,7 +45,7 @@ jobs:
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          ### **适用于Amlogic盒子的OpenWrt固件**
+          ### **适用于Amlogic平台的N1盒子OpenWrt固件**
           * **固件信息：**
           默认IP: `10.10.10.1`
           默认用户名: `root`
