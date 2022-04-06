@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - name: 检查
+    - name: Checkout
       uses: actions/checkout@main
 
     - name: 检查服务器配置

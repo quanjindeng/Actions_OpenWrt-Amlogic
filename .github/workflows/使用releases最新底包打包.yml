@@ -49,6 +49,10 @@ jobs:
           默认IP: 10.10.10.1
           默认用户名: root
           默认密码: password
+          * **使用方法：**
+          安装固件：写入U盘直接使用；U盘启动后可输入命令 openwrt-install-amlogic 按照英文提示写入到emmc
+          更新固件：将固件放在 /mnt/mmcbl2k4/ 目录下，输入命令 openwrt-update-amlogic 可直接更新
+          登录Luci界面后，可直接使用晶晨宝盒插件进行写入emmc或者更新操作，免去手动输入命令！
           * **更新说明：**
           目前已集成大部分常用插件！
           * **N1云编译OP固件互助交流：**
