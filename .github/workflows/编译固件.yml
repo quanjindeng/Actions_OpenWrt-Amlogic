@@ -21,7 +21,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config
+  CONFIG_FILE: .config-full
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   TZ: Asia/Shanghai
@@ -135,7 +135,7 @@ jobs:
         PACKAGE_SOC: s905d
        # KERNEL_AUTO_LATEST: false
         KERNEL_REPO_URL: https://github.com/${GITHUB_REPOSITORY}/tree/main/kernel
-        KERNEL_VERSION_NAME: 5.4.174_5.15.17_5.17.1
+        KERNEL_VERSION_NAME: 5.4.188_5.17.1
 
     - name: 发布固件
       uses: ncipollo/release-action@v1
