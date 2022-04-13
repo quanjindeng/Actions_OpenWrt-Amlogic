@@ -4179,11 +4179,11 @@ CONFIG_PACKAGE_libyaml=y
 #
 # Printing
 #
-# CONFIG_PACKAGE_libcups is not set
-# CONFIG_PACKAGE_libcupscgi is not set
+CONFIG_PACKAGE_libcups=y
+CONFIG_PACKAGE_libcupscgi=y
 # CONFIG_PACKAGE_libcupsimage is not set
-# CONFIG_PACKAGE_libcupsmime is not set
-# CONFIG_PACKAGE_libcupsppdc is not set
+CONFIG_PACKAGE_libcupsmime=y
+CONFIG_PACKAGE_libcupsppdc=y
 # end of Printing
 
 #
@@ -5003,7 +5003,7 @@ CONFIG_PACKAGE_luci-app-control-timewol=y
 CONFIG_PACKAGE_luci-app-control-webrestriction=y
 CONFIG_PACKAGE_luci-app-control-weburl=y
 # CONFIG_PACKAGE_luci-app-cshark is not set
-# CONFIG_PACKAGE_luci-app-cupsd is not set
+CONFIG_PACKAGE_luci-app-cupsd=y
 # CONFIG_PACKAGE_luci-app-dawn is not set
 CONFIG_PACKAGE_luci-app-ddns=y
 CONFIG_PACKAGE_luci-app-ddnsto=y
@@ -5070,8 +5070,8 @@ CONFIG_PACKAGE_luci-app-nfs=y
 # CONFIG_PACKAGE_luci-app-nginx-pingos is not set
 CONFIG_PACKAGE_luci-app-nlbwmon=y
 # CONFIG_PACKAGE_luci-app-noddos is not set
-# CONFIG_PACKAGE_luci-app-npc is not set
-# CONFIG_PACKAGE_luci-app-nps is not set
+CONFIG_PACKAGE_luci-app-npc=y
+CONFIG_PACKAGE_luci-app-nps=y
 # CONFIG_PACKAGE_luci-app-ntpc is not set
 CONFIG_PACKAGE_luci-app-oaf=y
 CONFIG_PACKAGE_luci-app-ocserv=y
@@ -5084,7 +5084,7 @@ CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-openvpn=y
 CONFIG_PACKAGE_luci-app-openvpn-server=y
 # CONFIG_PACKAGE_luci-app-p910nd is not set
-# CONFIG_PACKAGE_luci-app-packet-capture is not set
+CONFIG_PACKAGE_luci-app-packet-capture=y
 # CONFIG_PACKAGE_luci-app-pagekitec is not set
 CONFIG_PACKAGE_luci-app-passwall=y
 
@@ -5160,7 +5160,7 @@ CONFIG_PACKAGE_luci-app-serverchan=y
 CONFIG_PACKAGE_luci-app-shairplay=y
 # CONFIG_PACKAGE_luci-app-shortcutmenu is not set
 # CONFIG_PACKAGE_luci-app-siitwizard is not set
-# CONFIG_PACKAGE_luci-app-simple-adblock is not set
+CONFIG_PACKAGE_luci-app-simple-adblock=y
 CONFIG_PACKAGE_luci-app-smartdns=y
 # CONFIG_PACKAGE_luci-app-sms-tool is not set
 # CONFIG_PACKAGE_luci-app-snmpd is not set
@@ -5495,6 +5495,9 @@ CONFIG_PACKAGE_luci-i18n-nfs-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-nlbwmon-ja is not set
 # CONFIG_PACKAGE_luci-i18n-nlbwmon-ru is not set
 CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-npc-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-npc-zh_Hans is not set
+CONFIG_PACKAGE_luci-i18n-nps-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-oaf-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-oaf-zh_Hans is not set
 # CONFIG_PACKAGE_luci-i18n-openvpn-ca is not set
@@ -5523,6 +5526,9 @@ CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-openvpn-vi is not set
 CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-openvpn-zh-tw is not set
+# CONFIG_PACKAGE_luci-i18n-packet-capture-fr is not set
+CONFIG_PACKAGE_luci-i18n-packet-capture-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-packet-capture-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-passwall-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-passwall2-zh-cn=y
@@ -5560,6 +5566,11 @@ CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-shairplay-ja is not set
 # CONFIG_PACKAGE_luci-i18n-shairplay-pt-br is not set
 # CONFIG_PACKAGE_luci-i18n-shairplay-ru is not set
+# CONFIG_PACKAGE_luci-i18n-simple-adblock-ja is not set
+# CONFIG_PACKAGE_luci-i18n-simple-adblock-pt is not set
+# CONFIG_PACKAGE_luci-i18n-simple-adblock-pt-br is not set
+# CONFIG_PACKAGE_luci-i18n-simple-adblock-ru is not set
+# CONFIG_PACKAGE_luci-i18n-simple-adblock-sv is not set
 CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-smartdns-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-socat-zh-cn=y
@@ -5636,8 +5647,6 @@ CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-uugamebooster-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-v2raya-zh-cn is not set
-# CONFIG_PACKAGE_luci-i18n-v2raya-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-vpnbypass-pt-br is not set
 # CONFIG_PACKAGE_luci-i18n-vpnbypass-ru is not set
@@ -6253,7 +6262,7 @@ CONFIG_PACKAGE_wsdd2=y
 #
 # Printing
 #
-# CONFIG_PACKAGE_cups is not set
+CONFIG_PACKAGE_cups=y
 # CONFIG_PACKAGE_cups-bsd is not set
 # CONFIG_PACKAGE_cups-client is not set
 # CONFIG_PACKAGE_cups-filters is not set
@@ -6669,7 +6678,7 @@ CONFIG_PACKAGE_uhttpd-mod-ubus=y
 CONFIG_PACKAGE_v2ray-plugin=y
 # CONFIG_V2RAY_PLUGIN_INCLUDE_GOPROXY is not set
 # CONFIG_V2RAY_PLUGIN_COMPRESS_UPX is not set
-# CONFIG_PACKAGE_v2raya is not set
+CONFIG_PACKAGE_v2raya=y
 # CONFIG_V2RAYA_COMPRESS_GOPROXY is not set
 # CONFIG_V2RAYA_COMPRESS_UPX is not set
 CONFIG_PACKAGE_xray-plugin=y
@@ -6902,7 +6911,7 @@ CONFIG_PACKAGE_netperf=y
 CONFIG_PACKAGE_nlbwmon=y
 # CONFIG_PACKAGE_noddos is not set
 # CONFIG_PACKAGE_noping is not set
-# CONFIG_PACKAGE_npc is not set
+CONFIG_PACKAGE_npc=y
 # CONFIG_NPC_COMPRESS_UPX is not set
 # CONFIG_PACKAGE_nps is not set
 # CONFIG_NPS_COMPRESS_UPX is not set
@@ -6981,7 +6990,7 @@ CONFIG_SAMBA4_SERVER_VFS=y
 # CONFIG_PACKAGE_scapy is not set
 # CONFIG_PACKAGE_sctp-tools is not set
 # CONFIG_PACKAGE_ser2net is not set
-# CONFIG_PACKAGE_simple-adblock is not set
+CONFIG_PACKAGE_simple-adblock=y
 CONFIG_PACKAGE_simple-obfs=y
 CONFIG_PACKAGE_simple-obfs-server=y
 
@@ -7016,7 +7025,7 @@ CONFIG_SOCAT_SSL=y
 # CONFIG_PACKAGE_tac_plus is not set
 # CONFIG_PACKAGE_tac_plus-pam is not set
 # CONFIG_PACKAGE_tayga is not set
-# CONFIG_PACKAGE_tcpdump is not set
+CONFIG_PACKAGE_tcpdump=y
 # CONFIG_PACKAGE_tcpdump-mini is not set
 CONFIG_PACKAGE_tcping=y
 # CONFIG_PACKAGE_tcpping is not set
@@ -7607,7 +7616,7 @@ CONFIG_PACKAGE_coreutils-split=y
 # CONFIG_PACKAGE_coreutils-tail is not set
 # CONFIG_PACKAGE_coreutils-tee is not set
 # CONFIG_PACKAGE_coreutils-test is not set
-# CONFIG_PACKAGE_coreutils-timeout is not set
+CONFIG_PACKAGE_coreutils-timeout=y
 # CONFIG_PACKAGE_coreutils-touch is not set
 # CONFIG_PACKAGE_coreutils-tr is not set
 # CONFIG_PACKAGE_coreutils-true is not set
