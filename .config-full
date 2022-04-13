@@ -5236,7 +5236,7 @@ CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray_plugin=y
 CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Libev_Server=y
 CONFIG_PACKAGE_luci-app-watchcat=y
 # CONFIG_PACKAGE_luci-app-webadmin is not set
-CONFIG_PACKAGE_luci-app-webdav=y
+# CONFIG_PACKAGE_luci-app-webdav is not set
 # CONFIG_PACKAGE_luci-app-wifidog is not set
 # CONFIG_PACKAGE_luci-app-wifischedule is not set
 CONFIG_PACKAGE_luci-app-wireguard=y
@@ -5683,7 +5683,7 @@ CONFIG_PACKAGE_luci-i18n-vssr-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-watchcat-vi is not set
 CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-watchcat-zh-tw is not set
-CONFIG_PACKAGE_luci-i18n-webdav-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-webdav-zh-cn is not set
 # CONFIG_PACKAGE_luci-i18n-webdav-zh_Hans is not set
 # CONFIG_PACKAGE_luci-i18n-wireguard-ja is not set
 # CONFIG_PACKAGE_luci-i18n-wireguard-pt-br is not set
