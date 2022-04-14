@@ -116,12 +116,12 @@ jobs:
     - name: 清理磁盘空间
       if: (!cancelled())
       run: |
-        echo "清理之前："
+        echo -e "清理之前：\n"
         df -hT
         mkdir openwrt-armvirt
         mv openwrt/bin/targets/*/*/*.tar.gz openwrt-armvirt/
-        rm -rf openwrt
-        echo "清理之后："
+        rm -rf openwrt/*
+        echo -e "清理之后：\n"
         df -hT
 
     - name: 打包内核
