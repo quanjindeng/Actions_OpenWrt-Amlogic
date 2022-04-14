@@ -77,12 +77,10 @@ jobs:
         df -hT
         mkdir openwrt-armvirt
         # mv openwrt/bin/targets/*/*/*.tar.gz openwrt-armvirt/
-        rm -rf openwrt/*
+        rm -rf /workdir/openwrt/*
         echo -e "清理之后：\n"
         df -hT
         echo -e "当前路径文件：\n"
         ls -l
         echo -e "列出空间占用前10的目录或文件：\n"
-        du --max-depth=1 / |sort -nr | head -10
-        echo -e "列出当前目录空间占用前10的目录或文件：\n"
-        du --max-depth=1 ./ |sort -nr | head -10
+        sudo du -h --max-depth=2 /workdir |sort -nr | head -10
