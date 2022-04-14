@@ -73,14 +73,20 @@ jobs:
     - name: 清理磁盘空间
       if: (!cancelled())
       run: |
-        echo -e "清理之前：\n"
+        echo "清理之前："
         df -hT
         mkdir openwrt-armvirt
         # mv openwrt/bin/targets/*/*/*.tar.gz openwrt-armvirt/
+        echo -e "\n"
+        echo "列出空间占用前10的目录或文件："
+        sudo du -h --max-depth=2 /workdir/openwrt |sort -nr | head -10
         rm -rf /workdir/openwrt/*
-        echo -e "清理之后：\n"
+        echo -e "\n"
+        echo "清理之后："
         df -hT
-        echo -e "当前路径文件：\n"
+        echo -e "\n"
+        echo "当前路径文件"
         ls -l
-        echo -e "列出空间占用前10的目录或文件：\n"
-        sudo du -h --max-depth=2 /workdir |sort -nr | head -10
+        echo -e "\n"
+        echo "列出空间占用前10的目录或文件："
+        sudo du -h --max-depth=1 /workdir/openwrt |sort -nr | head -10
