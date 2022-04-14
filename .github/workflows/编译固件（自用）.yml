@@ -152,7 +152,8 @@ jobs:
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          自用固件，勿下！
+          自用固件，插件较少！
+          如有其他需求，建议下载全插件版本固件！
           
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
