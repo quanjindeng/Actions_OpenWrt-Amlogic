@@ -6060,7 +6060,7 @@ CONFIG_PACKAGE_iptaccount=y
 
 # CONFIG_PACKAGE_miniupnpc is not set
 CONFIG_PACKAGE_miniupnpd=y
-# CONFIG_MINIUPNPD_IGDv2 is not set
+CONFIG_MINIUPNPD_IGDv2=y
 # CONFIG_PACKAGE_natpmpc is not set
 CONFIG_PACKAGE_nftables-json=y
 # CONFIG_PACKAGE_nftables-nojson is not set
