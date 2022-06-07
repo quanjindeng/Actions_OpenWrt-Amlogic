@@ -56,13 +56,10 @@ CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mcpu=cortex-a53"
 CONFIG_CPU_TYPE="cortex-a53"
 CONFIG_LINUX_5_4=y
 CONFIG_DEFAULT_base-files=y
-CONFIG_DEFAULT_bash=y
 CONFIG_DEFAULT_block-mount=y
 CONFIG_DEFAULT_busybox=y
 CONFIG_DEFAULT_ca-certificates=y
 CONFIG_DEFAULT_coremark=y
-CONFIG_DEFAULT_coreutils=y
-CONFIG_DEFAULT_coreutils-nohup=y
 CONFIG_DEFAULT_curl=y
 CONFIG_DEFAULT_ddns-scripts_aliyun=y
 CONFIG_DEFAULT_ddns-scripts_dnspod=y
@@ -77,14 +74,11 @@ CONFIG_DEFAULT_ipset=y
 CONFIG_DEFAULT_iptables=y
 CONFIG_DEFAULT_iptables-mod-extra=y
 CONFIG_DEFAULT_iptables-mod-tproxy=y
-CONFIG_DEFAULT_kmod-inet-diag=y
 CONFIG_DEFAULT_kmod-ipt-raw=y
 CONFIG_DEFAULT_kmod-nf-nathelper=y
 CONFIG_DEFAULT_kmod-nf-nathelper-extra=y
 CONFIG_DEFAULT_kmod-tun=y
 CONFIG_DEFAULT_libc=y
-CONFIG_DEFAULT_libcap=y
-CONFIG_DEFAULT_libcap-bin=y
 CONFIG_DEFAULT_libgcc=y
 CONFIG_DEFAULT_libustream-openssl=y
 CONFIG_DEFAULT_logd=y
@@ -95,10 +89,8 @@ CONFIG_DEFAULT_luci-app-autoreboot=y
 CONFIG_DEFAULT_luci-app-ddns=y
 CONFIG_DEFAULT_luci-app-filetransfer=y
 CONFIG_DEFAULT_luci-app-nlbwmon=y
-CONFIG_DEFAULT_luci-app-ramfree=y
 CONFIG_DEFAULT_luci-app-ssr-plus=y
 CONFIG_DEFAULT_luci-app-turboacc=y
-CONFIG_DEFAULT_luci-app-unblockmusic=y
 CONFIG_DEFAULT_luci-app-upnp=y
 CONFIG_DEFAULT_luci-app-vlmcsd=y
 CONFIG_DEFAULT_luci-app-vsftpd=y
@@ -111,8 +103,6 @@ CONFIG_DEFAULT_opkg=y
 CONFIG_DEFAULT_ppp=y
 CONFIG_DEFAULT_ppp-mod-pppoe=y
 CONFIG_DEFAULT_procd=y
-CONFIG_DEFAULT_ruby=y
-CONFIG_DEFAULT_ruby-yaml=y
 CONFIG_DEFAULT_uci=y
 CONFIG_DEFAULT_uclient-fetch=y
 CONFIG_DEFAULT_urandom-seed=y
@@ -2929,6 +2919,16 @@ CONFIG_PACKAGE_lua-cjson=y
 # CONFIG_PACKAGE_lua-copas is not set
 # CONFIG_PACKAGE_lua-coxpcall is not set
 # CONFIG_PACKAGE_lua-cs-bouncer is not set
+# CONFIG_PACKAGE_lua-eco is not set
+# CONFIG_PACKAGE_lua-eco-dns is not set
+# CONFIG_PACKAGE_lua-eco-file is not set
+# CONFIG_PACKAGE_lua-eco-ip is not set
+# CONFIG_PACKAGE_lua-eco-iw is not set
+# CONFIG_PACKAGE_lua-eco-log is not set
+# CONFIG_PACKAGE_lua-eco-socket is not set
+# CONFIG_PACKAGE_lua-eco-ssl is not set
+# CONFIG_PACKAGE_lua-eco-sys is not set
+# CONFIG_PACKAGE_lua-eco-ubus is not set
 # CONFIG_PACKAGE_lua-ev is not set
 # CONFIG_PACKAGE_lua-examples is not set
 # CONFIG_PACKAGE_lua-libmodbus is not set
@@ -2985,7 +2985,6 @@ CONFIG_PACKAGE_luci-lib-fs=y
 # CONFIG_PACKAGE_node-npm is not set
 # CONFIG_PACKAGE_node-serialport is not set
 # CONFIG_PACKAGE_node-serialport-bindings is not set
-# CONFIG_PACKAGE_node-yarn is not set
 # end of Node.js
 
 #
@@ -3010,7 +3009,7 @@ CONFIG_PERL_NOCOMMENT=y
 # CONFIG_PACKAGE_perl-ack is not set
 # CONFIG_PACKAGE_perl-authen-sasl is not set
 # CONFIG_PACKAGE_perl-authen-sasl-xs is not set
-# CONFIG_PACKAGE_perl-cgi is not set
+CONFIG_PACKAGE_perl-cgi=y
 # CONFIG_PACKAGE_perl-compress-bzip2 is not set
 # CONFIG_PACKAGE_perl-dbi is not set
 # CONFIG_PACKAGE_perl-device-serialport is not set
@@ -3021,8 +3020,8 @@ CONFIG_PERL_NOCOMMENT=y
 # CONFIG_PACKAGE_perl-file-rsyncp is not set
 # CONFIG_PACKAGE_perl-file-sharedir-install is not set
 # CONFIG_PACKAGE_perl-html-form is not set
-# CONFIG_PACKAGE_perl-html-parser is not set
-# CONFIG_PACKAGE_perl-html-tagset is not set
+CONFIG_PACKAGE_perl-html-parser=y
+CONFIG_PACKAGE_perl-html-tagset=y
 # CONFIG_PACKAGE_perl-html-tree is not set
 # CONFIG_PACKAGE_perl-http-cookies is not set
 # CONFIG_PACKAGE_perl-http-daemon is not set
@@ -3076,21 +3075,21 @@ CONFIG_PACKAGE_perlbase-class=y
 CONFIG_PACKAGE_perlbase-config=y
 # CONFIG_PACKAGE_perlbase-cpan is not set
 CONFIG_PACKAGE_perlbase-cwd=y
-# CONFIG_PACKAGE_perlbase-data is not set
+CONFIG_PACKAGE_perlbase-data=y
 # CONFIG_PACKAGE_perlbase-db is not set
 # CONFIG_PACKAGE_perlbase-db-file is not set
 # CONFIG_PACKAGE_perlbase-dbm-filter is not set
 # CONFIG_PACKAGE_perlbase-devel is not set
 # CONFIG_PACKAGE_perlbase-diagnostics is not set
-# CONFIG_PACKAGE_perlbase-digest is not set
+CONFIG_PACKAGE_perlbase-digest=y
 # CONFIG_PACKAGE_perlbase-dirhandle is not set
 # CONFIG_PACKAGE_perlbase-dumpvalue is not set
 # CONFIG_PACKAGE_perlbase-dumpvar is not set
 CONFIG_PACKAGE_perlbase-dynaloader=y
-# CONFIG_PACKAGE_perlbase-encode is not set
+CONFIG_PACKAGE_perlbase-encode=y
 # CONFIG_PACKAGE_perlbase-encoding is not set
 # CONFIG_PACKAGE_perlbase-english is not set
-# CONFIG_PACKAGE_perlbase-env is not set
+CONFIG_PACKAGE_perlbase-env=y
 CONFIG_PACKAGE_perlbase-errno=y
 CONFIG_PACKAGE_perlbase-essential=y
 # CONFIG_PACKAGE_perlbase-experimental is not set
@@ -3102,15 +3101,15 @@ CONFIG_PACKAGE_perlbase-feature=y
 CONFIG_PACKAGE_perlbase-file=y
 # CONFIG_PACKAGE_perlbase-filecache is not set
 CONFIG_PACKAGE_perlbase-filehandle=y
-# CONFIG_PACKAGE_perlbase-filetest is not set
+CONFIG_PACKAGE_perlbase-filetest=y
 # CONFIG_PACKAGE_perlbase-filter is not set
-# CONFIG_PACKAGE_perlbase-findbin is not set
+CONFIG_PACKAGE_perlbase-findbin=y
 # CONFIG_PACKAGE_perlbase-gdbm-file is not set
 CONFIG_PACKAGE_perlbase-getopt=y
 # CONFIG_PACKAGE_perlbase-hash is not set
 # CONFIG_PACKAGE_perlbase-http-tiny is not set
 CONFIG_PACKAGE_perlbase-i18n=y
-# CONFIG_PACKAGE_perlbase-if is not set
+CONFIG_PACKAGE_perlbase-if=y
 CONFIG_PACKAGE_perlbase-integer=y
 CONFIG_PACKAGE_perlbase-io=y
 # CONFIG_PACKAGE_perlbase-ipc is not set
@@ -3121,7 +3120,7 @@ CONFIG_PACKAGE_perlbase-locale=y
 # CONFIG_PACKAGE_perlbase-math is not set
 # CONFIG_PACKAGE_perlbase-memoize is not set
 # CONFIG_PACKAGE_perlbase-meta-notation is not set
-# CONFIG_PACKAGE_perlbase-mime is not set
+CONFIG_PACKAGE_perlbase-mime=y
 # CONFIG_PACKAGE_perlbase-module is not set
 # CONFIG_PACKAGE_perlbase-mro is not set
 # CONFIG_PACKAGE_perlbase-net is not set
@@ -3142,17 +3141,17 @@ CONFIG_PACKAGE_perlbase-scalar=y
 # CONFIG_PACKAGE_perlbase-sdbm-file is not set
 # CONFIG_PACKAGE_perlbase-search is not set
 CONFIG_PACKAGE_perlbase-selectsaver=y
-# CONFIG_PACKAGE_perlbase-selfloader is not set
+CONFIG_PACKAGE_perlbase-selfloader=y
 # CONFIG_PACKAGE_perlbase-sigtrap is not set
 CONFIG_PACKAGE_perlbase-socket=y
 # CONFIG_PACKAGE_perlbase-sort is not set
-# CONFIG_PACKAGE_perlbase-storable is not set
+CONFIG_PACKAGE_perlbase-storable=y
 CONFIG_PACKAGE_perlbase-symbol=y
-# CONFIG_PACKAGE_perlbase-sys is not set
+CONFIG_PACKAGE_perlbase-sys=y
 # CONFIG_PACKAGE_perlbase-tap is not set
 # CONFIG_PACKAGE_perlbase-term is not set
 # CONFIG_PACKAGE_perlbase-test is not set
-# CONFIG_PACKAGE_perlbase-text is not set
+CONFIG_PACKAGE_perlbase-text=y
 CONFIG_PACKAGE_perlbase-thread=y
 CONFIG_PACKAGE_perlbase-threads=y
 CONFIG_PACKAGE_perlbase-tie=y
@@ -4297,6 +4296,7 @@ CONFIG_PACKAGE_libcharset=y
 CONFIG_PACKAGE_libcomerr=y
 CONFIG_PACKAGE_libconfig=y
 # CONFIG_PACKAGE_libcron is not set
+# CONFIG_PACKAGE_libcronet is not set
 # CONFIG_PACKAGE_libcryptopp is not set
 # CONFIG_PACKAGE_libctf is not set
 CONFIG_PACKAGE_libcurl=y
@@ -4781,6 +4781,7 @@ CONFIG_PACKAGE_luci-newapi=y
 #
 # CONFIG_PACKAGE_luci-app-UUGameAcc is not set
 # CONFIG_PACKAGE_luci-app-accesscontrol is not set
+# CONFIG_PACKAGE_luci-app-acme is not set
 # CONFIG_PACKAGE_luci-app-adblock is not set
 # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
 CONFIG_PACKAGE_luci-app-adguardhome=y
@@ -4858,7 +4859,6 @@ CONFIG_PACKAGE_luci-app-dockerman=y
 # CONFIG_PACKAGE_luci-app-e2guardian is not set
 # CONFIG_PACKAGE_luci-app-easymesh is not set
 # CONFIG_PACKAGE_luci-app-easyupdate is not set
-# CONFIG_PACKAGE_luci-app-familycloud is not set
 # CONFIG_PACKAGE_luci-app-fileassistant is not set
 # CONFIG_PACKAGE_luci-app-filebrowser is not set
 # CONFIG_PACKAGE_luci-app-filetransfer is not set
@@ -5007,7 +5007,9 @@ CONFIG_PACKAGE_luci-app-socat=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_PDNSD is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2 is not set
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_SagerNet_Core=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client is not set
@@ -5017,7 +5019,6 @@ CONFIG_PACKAGE_luci-app-socat=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_Obfs is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_Plugin is not set
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray is not set
 # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
 # CONFIG_PACKAGE_luci-app-statistics is not set
 # CONFIG_PACKAGE_luci-app-store is not set
@@ -5088,6 +5089,7 @@ CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_PACKAGE_luci-theme-atmaterial_new=y
 CONFIG_PACKAGE_luci-theme-bootstrap=y
 # CONFIG_PACKAGE_luci-theme-edge is not set
+# CONFIG_PACKAGE_luci-theme-ifit is not set
 # CONFIG_PACKAGE_luci-theme-material is not set
 # CONFIG_PACKAGE_luci-theme-mcat is not set
 # CONFIG_PACKAGE_luci-theme-neobird is not set
@@ -5272,7 +5274,6 @@ CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-samba4-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-socat-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-socat-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-turboacc-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-uhttpd-ja is not set
@@ -5653,9 +5654,11 @@ CONFIG_PACKAGE_ddns-scripts_nsupdate=y
 CONFIG_PACKAGE_ddns-scripts_route53-v1=y
 # CONFIG_PACKAGE_dhcp-forwarder is not set
 CONFIG_PACKAGE_dns2socks=y
+CONFIG_PACKAGE_dns2tcp=y
 # CONFIG_PACKAGE_dnscrypt-proxy is not set
 # CONFIG_PACKAGE_dnscrypt-proxy-resolvers is not set
 # CONFIG_PACKAGE_dnsdist is not set
+# CONFIG_PACKAGE_dnslookup is not set
 # CONFIG_PACKAGE_dnsproxy is not set
 # CONFIG_PACKAGE_drill is not set
 # CONFIG_PACKAGE_hostip is not set
@@ -6083,7 +6086,6 @@ CONFIG_OPENVPN_openssl_ENABLE_SMALL=y
 # CONFIG_PACKAGE_vpnc is not set
 # CONFIG_PACKAGE_vpnc-scripts is not set
 # CONFIG_PACKAGE_wireguard-tools is not set
-# CONFIG_PACKAGE_wiretrustee is not set
 # CONFIG_PACKAGE_xl2tpd is not set
 # CONFIG_PACKAGE_zerotier is not set
 # end of VPN
@@ -6343,7 +6345,6 @@ CONFIG_PACKAGE_cifsmount=y
 # CONFIG_PACKAGE_dawn is not set
 # CONFIG_PACKAGE_dhcpcd is not set
 # CONFIG_PACKAGE_dmapd is not set
-CONFIG_PACKAGE_dns2tcp=y
 # CONFIG_PACKAGE_dnscrypt-proxy2 is not set
 # CONFIG_PACKAGE_dnsforwarder is not set
 # CONFIG_PACKAGE_dnstap is not set
@@ -6445,6 +6446,9 @@ CONFIG_PACKAGE_libipset=y
 # CONFIG_PACKAGE_netcat is not set
 # CONFIG_PACKAGE_netdiscover is not set
 # CONFIG_PACKAGE_netifyd is not set
+# CONFIG_PACKAGE_noping is not set
+# CONFIG_PACKAGE_oping is not set
+CONFIG_PACKAGE_ppp=y
 # CONFIG_PACKAGE_netkeeper-interception is not set
 CONFIG_PACKAGE_netperf=y
 # CONFIG_PACKAGE_netsniff-ng is not set
@@ -6453,7 +6457,6 @@ CONFIG_PACKAGE_netperf=y
 # CONFIG_PACKAGE_nfdump is not set
 CONFIG_PACKAGE_nlbwmon=y
 # CONFIG_PACKAGE_noddos is not set
-# CONFIG_PACKAGE_noping is not set
 # CONFIG_PACKAGE_npc is not set
 # CONFIG_NPC_COMPRESS_UPX is not set
 # CONFIG_PACKAGE_nps is not set
@@ -6478,7 +6481,6 @@ CONFIG_PACKAGE_odhcpd_ipv6only_ext_cer_id=0
 # CONFIG_PACKAGE_oor is not set
 # CONFIG_PACKAGE_open-iscsi is not set
 # CONFIG_PACKAGE_oscam is not set
-# CONFIG_PACKAGE_oping is not set
 # CONFIG_PACKAGE_ostiary is not set
 # CONFIG_PACKAGE_pagekitec is not set
 # CONFIG_PACKAGE_pcapplusplus is not set
@@ -6487,7 +6489,6 @@ CONFIG_PACKAGE_odhcpd_ipv6only_ext_cer_id=0
 # CONFIG_PACKAGE_pimbd is not set
 # CONFIG_PACKAGE_pingcheck is not set
 # CONFIG_PACKAGE_port-mirroring is not set
-CONFIG_PACKAGE_ppp=y
 # CONFIG_PACKAGE_ppp-mod-passwordfd is not set
 # CONFIG_PACKAGE_ppp-mod-pppoa is not set
 CONFIG_PACKAGE_ppp-mod-pppoe=y
@@ -6515,6 +6516,7 @@ CONFIG_RPCBIND_RMTCALLS=y
 # CONFIG_PACKAGE_rssileds is not set
 # CONFIG_PACKAGE_rsyslog is not set
 # CONFIG_PACKAGE_safe-search is not set
+# CONFIG_PACKAGE_sagernet-core is not set
 # CONFIG_PACKAGE_samba36-client is not set
 # CONFIG_PACKAGE_samba36-net is not set
 # CONFIG_PACKAGE_samba36-server is not set
@@ -6762,6 +6764,7 @@ CONFIG_PACKAGE_parted=y
 #
 # Editors
 #
+# CONFIG_PACKAGE_hexedit is not set
 # CONFIG_PACKAGE_joe is not set
 # CONFIG_PACKAGE_joe-extras is not set
 # CONFIG_PACKAGE_jupp is not set
@@ -7271,6 +7274,7 @@ CONFIG_PACKAGE_losetup=y
 CONFIG_PACKAGE_lrzsz=y
 CONFIG_PACKAGE_lscpu=y
 # CONFIG_PACKAGE_lslocks is not set
+# CONFIG_PACKAGE_lsns is not set
 CONFIG_PACKAGE_lsof=y
 # CONFIG_PACKAGE_lxc is not set
 # CONFIG_PACKAGE_maccalc is not set
@@ -7492,4 +7496,4 @@ CONFIG_PACKAGE_uuidgen=y
 # end of Font-Utils
 # end of Xorg
 
-CONFIG_OVERRIDE_PKGS="UnblockNeteaseMusic UnblockNeteaseMusic-Go adguardhome aliyundrive-fuse aliyundrive-webdav amule antileech aria2 baidupcs-web dns2socks dnsforwarder dnsproxy gmediarender go-aliyundrive-webdav haproxy ipt2socks libcups luci-app-aliyundrive-fuse luci-app-aliyundrive-webdav luci-app-amule luci-app-autoreboot luci-app-baidupcs-web luci-app-diskman luci-app-dockerman luci-app-easymesh luci-app-guest-wifi luci-app-ipsec-server luci-app-kodexplorer luci-app-netdata luci-app-nft-qos luci-app-pppoe-relay luci-app-pptp-server luci-app-pushbot luci-app-ramfree luci-app-serverchan luci-app-softethervpn luci-app-verysync luci-app-xlnetacc microsocks miniupnpd mosdns msmtp mwan3 nft-qos nps pdnsd-alt qBittorrent qBittorrent-static qtbase qttools rblibtorrent redsocks2 shadowsocks-libev smartdns tcpping uugamebooster verysync wxbase"
+CONFIG_OVERRIDE_PKGS="UnblockNeteaseMusic UnblockNeteaseMusic-Go adguardhome aliyundrive-fuse aliyundrive-webdav amule antileech aria2 baidupcs-web dns2socks dnsforwarder dnsproxy gmediarender go-aliyundrive-webdav haproxy ipt2socks libcups luci-app-aliyundrive-fuse luci-app-aliyundrive-webdav luci-app-amule luci-app-autoreboot luci-app-baidupcs-web luci-app-diskman luci-app-dockerman luci-app-easymesh luci-app-guest-wifi luci-app-ipsec-server luci-app-kodexplorer luci-app-netdata luci-app-nft-qos luci-app-pppoe-relay luci-app-pptp-server luci-app-pushbot luci-app-ramfree luci-app-serverchan luci-app-socat luci-app-softethervpn luci-app-verysync luci-app-xlnetacc microsocks miniupnpd mosdns msmtp mwan3 nps pdnsd-alt qBittorrent qBittorrent-static qtbase qttools rblibtorrent redsocks2 shadowsocks-libev smartdns tcpping uugamebooster verysync wxbase"
