@@ -79,7 +79,7 @@ jobs:
     - name: 编译工具链缓存
       uses: klever1988/cachewrtbuild@main
       with:
-        ccache: 'false'
+        ccache: 'true'
         prefix: ${{ github.workspace }}/openwrt
 
     - name: 加载自定义feeds
