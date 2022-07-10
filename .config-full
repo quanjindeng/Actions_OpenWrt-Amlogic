@@ -1629,7 +1629,9 @@ CONFIG_ZABBIX_POSTGRESQL=y
 #
 # openwisp
 #
+# CONFIG_PACKAGE_netjson-monitoring is not set
 # CONFIG_PACKAGE_openwisp-config is not set
+# CONFIG_PACKAGE_openwisp-monitoring is not set
 # end of openwisp
 
 CONFIG_PACKAGE_atop=y
@@ -2717,6 +2719,7 @@ CONFIG_PACKAGE_kmod-usbip=y
 CONFIG_PACKAGE_kmod-usbip-client=y
 CONFIG_PACKAGE_kmod-usbip-server=y
 CONFIG_PACKAGE_kmod-usbmon=y
+# CONFIG_PACKAGE_kmod-xr-usb-serial is not set
 # end of USB Support
 
 #
@@ -4199,6 +4202,7 @@ CONFIG_PACKAGE_libyaml=y
 # CONFIG_PACKAGE_libdcwproto is not set
 # CONFIG_PACKAGE_libdcwsocket is not set
 # CONFIG_PACKAGE_libsctp is not set
+# CONFIG_PACKAGE_libslirp is not set
 # CONFIG_PACKAGE_libuhttpd-mbedtls is not set
 # CONFIG_PACKAGE_libuhttpd-nossl is not set
 CONFIG_PACKAGE_libuhttpd-openssl=y
@@ -4886,7 +4890,6 @@ CONFIG_PACKAGE_libzmq-nc=y
 # CONFIG_PACKAGE_mtdev is not set
 CONFIG_PACKAGE_musl-fts=y
 CONFIG_PACKAGE_mxml=y
-# CONFIG_PACKAGE_my-autocore-arm is not set
 # CONFIG_PACKAGE_nspr is not set
 CONFIG_PACKAGE_oniguruma=y
 # CONFIG_PACKAGE_open-isns is not set
@@ -5020,17 +5023,16 @@ CONFIG_PACKAGE_luci-app-autoreboot=y
 # CONFIG_PACKAGE_luci-app-bmx6 is not set
 CONFIG_PACKAGE_luci-app-bypass=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Shadowsocks_Libev_Client=y
-CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Client=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Shadowsocks_Libev_Server=y
+CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Client=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Server=y
-CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Simple_obfs=y
-CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Simple_obfs_server=y
-CONFIG_PACKAGE_luci-app-bypass_INCLUDE_V2ray_plugin=y
+CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Simple_Obfs=y
+# CONFIG_PACKAGE_luci-app-bypass_INCLUDE_V2ray_plugin is not set
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Xray=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Trojan=y
-CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Trojan-Go=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_NaiveProxy=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Kcptun=y
+CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Hysteria=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Socks5_Proxy=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Socks_Server=y
 CONFIG_PACKAGE_luci-app-chinadns-ng=y
@@ -5080,7 +5082,7 @@ CONFIG_PACKAGE_luci-app-frps=y
 CONFIG_PACKAGE_luci-app-gowebdav=y
 # CONFIG_PACKAGE_luci-app-gpsysupgrade is not set
 # CONFIG_PACKAGE_luci-app-guest-wifi is not set
-# CONFIG_PACKAGE_luci-app-haproxy-tcp is not set
+CONFIG_PACKAGE_luci-app-haproxy-tcp=y
 CONFIG_PACKAGE_luci-app-hd-idle=y
 # CONFIG_PACKAGE_luci-app-hnet is not set
 # CONFIG_PACKAGE_luci-app-homebridge is not set
@@ -5090,6 +5092,7 @@ CONFIG_PACKAGE_luci-app-ikoolproxy=y
 # CONFIG_PACKAGE_luci-app-ipsec-server is not set
 # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
 CONFIG_PACKAGE_luci-app-iptvhelper=y
+# CONFIG_PACKAGE_luci-app-istorex is not set
 # CONFIG_PACKAGE_luci-app-jd-dailybonus is not set
 # CONFIG_PACKAGE_luci-app-kodexplorer is not set
 # CONFIG_PACKAGE_luci-app-linkease is not set
@@ -5103,7 +5106,7 @@ CONFIG_PACKAGE_luci-app-mjpg-streamer=y
 CONFIG_PACKAGE_luci-app-music-remote-center=y
 CONFIG_PACKAGE_luci-app-mwan3=y
 CONFIG_PACKAGE_luci-app-mwan3helper=y
-CONFIG_PACKAGE_luci-app-n2n_v2=y
+# CONFIG_PACKAGE_luci-app-n2n is not set
 CONFIG_PACKAGE_luci-app-netdata=y
 # CONFIG_PACKAGE_luci-app-netkeeper-interception is not set
 # CONFIG_PACKAGE_luci-app-netspeedtest is not set
@@ -5122,7 +5125,6 @@ CONFIG_PACKAGE_luci-app-ocserv=y
 # CONFIG_PACKAGE_luci-app-olsr is not set
 # CONFIG_PACKAGE_luci-app-olsr-services is not set
 # CONFIG_PACKAGE_luci-app-olsr-viz is not set
-CONFIG_PACKAGE_luci-app-onliner=y
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-openvpn=y
 CONFIG_PACKAGE_luci-app-openvpn-server=y
@@ -5143,14 +5145,15 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_IPv6_Nat=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_NaiveProxy=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=y
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Server is not set
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Simple_Obfs=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=y
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin is not set
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray_Plugin=y
 # end of Configuration
@@ -5167,12 +5170,13 @@ CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_IPv6_Nat=y
 CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_NaiveProxy=y
 CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Libev_Client=y
 CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Libev_Server=y
-CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Rust_Client=y
+# CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Rust_Client is not set
+# CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Rust_Server is not set
 CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_ShadowsocksR_Libev_Client=y
 CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_ShadowsocksR_Libev_Server=y
 CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Simple_Obfs=y
 # CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_V2ray is not set
-CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_V2ray_Plugin=y
+# CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_V2ray_Plugin is not set
 # end of Configuration
 
 # CONFIG_PACKAGE_luci-app-polipo is not set
@@ -5200,9 +5204,9 @@ CONFIG_PACKAGE_luci-app-samba4=y
 CONFIG_PACKAGE_luci-app-serverchan=y
 # CONFIG_PACKAGE_luci-app-shadowsocks-libev is not set
 CONFIG_PACKAGE_luci-app-shairplay=y
-# CONFIG_PACKAGE_luci-app-shortcutmenu is not set
+CONFIG_PACKAGE_luci-app-shortcutmenu=y
 # CONFIG_PACKAGE_luci-app-siitwizard is not set
-CONFIG_PACKAGE_luci-app-simple-adblock=y
+# CONFIG_PACKAGE_luci-app-simple-adblock is not set
 CONFIG_PACKAGE_luci-app-smartdns=y
 # CONFIG_PACKAGE_luci-app-sms-tool is not set
 # CONFIG_PACKAGE_luci-app-snmpd is not set
@@ -5212,22 +5216,25 @@ CONFIG_PACKAGE_luci-app-softethervpn=y
 CONFIG_PACKAGE_luci-app-sqm=y
 # CONFIG_PACKAGE_luci-app-squid is not set
 # CONFIG_PACKAGE_luci-app-ssr-mudb-server is not set
-# CONFIG_PACKAGE_luci-app-ssr-plus is not set
+CONFIG_PACKAGE_luci-app-ssr-plus=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NONE_V2RAY is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray is not set
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_SagerNet_Core is not set
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks=y
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_PDNSD is not set
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_SagerNet_Core=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server is not set
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_Obfs=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_Plugin=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_Plugin is not set
 # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
 # CONFIG_PACKAGE_luci-app-statistics is not set
 # CONFIG_PACKAGE_luci-app-store is not set
@@ -5246,9 +5253,8 @@ CONFIG_PACKAGE_luci-app-timecontrol=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 CONFIG_PACKAGE_luci-app-turboacc=y
 CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_OFFLOADING=y
-# CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE_DRV is not set
-# CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE is not set
 CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_BBR_CCA=y
+# CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_PDNSD is not set
 # CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSFORWARDER is not set
 # CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSPROXY is not set
 CONFIG_PACKAGE_luci-app-udp2raw=y
@@ -5264,7 +5270,7 @@ CONFIG_PACKAGE_luci-app-upnp=y
 CONFIG_PACKAGE_luci-app-usb-printer=y
 # CONFIG_PACKAGE_luci-app-usb3disable is not set
 CONFIG_PACKAGE_luci-app-uugamebooster=y
-CONFIG_PACKAGE_luci-app-v2ray-server=y
+# CONFIG_PACKAGE_luci-app-v2ray-server is not set
 # CONFIG_PACKAGE_luci-app-v2raya is not set
 # CONFIG_PACKAGE_luci-app-verysync is not set
 CONFIG_PACKAGE_luci-app-vlmcsd=y
@@ -5277,6 +5283,7 @@ CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan=y
 CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Kcptun=y
 CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray_plugin=y
 CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Libev_Server=y
+CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Hysteria=y
 CONFIG_PACKAGE_luci-app-watchcat=y
 # CONFIG_PACKAGE_luci-app-webadmin is not set
 # CONFIG_PACKAGE_luci-app-wifidog is not set
@@ -5298,7 +5305,7 @@ CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_PACKAGE_luci-theme-atmaterial_new=y
 CONFIG_PACKAGE_luci-theme-bootstrap=y
 # CONFIG_PACKAGE_luci-theme-edge is not set
-# CONFIG_PACKAGE_luci-theme-ifit is not set
+CONFIG_PACKAGE_luci-theme-ifit=y
 # CONFIG_PACKAGE_luci-theme-material is not set
 # CONFIG_PACKAGE_luci-theme-mcat is not set
 CONFIG_PACKAGE_luci-theme-neobird=y
@@ -5331,6 +5338,7 @@ CONFIG_PACKAGE_luci-proto-wireguard=y
 # CONFIG_PACKAGE_luci-lib-dracula is not set
 # CONFIG_PACKAGE_luci-lib-httpclient is not set
 # CONFIG_PACKAGE_luci-lib-httpprotoutils is not set
+# CONFIG_PACKAGE_luci-lib-iform is not set
 CONFIG_PACKAGE_luci-lib-ip=y
 # CONFIG_PACKAGE_luci-lib-iptparser is not set
 # CONFIG_PACKAGE_luci-lib-jquery-1-4 is not set
@@ -5479,6 +5487,7 @@ CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-frps-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-gowebdav-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-gowebdav-zh_Hans is not set
+CONFIG_PACKAGE_luci-i18n-haproxy-tcp-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-hd-idle-ca is not set
 # CONFIG_PACKAGE_luci-i18n-hd-idle-cs is not set
 # CONFIG_PACKAGE_luci-i18n-hd-idle-de is not set
@@ -5541,7 +5550,6 @@ CONFIG_PACKAGE_luci-i18n-music-remote-center-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-mwan3-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-mwan3helper-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-n2n_v2-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-nfs-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-nlbwmon-ja is not set
@@ -5552,8 +5560,6 @@ CONFIG_PACKAGE_luci-i18n-npc-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-nps-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-oaf-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-oaf-zh_Hans is not set
-CONFIG_PACKAGE_luci-i18n-onliner-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-onliner-zh_Hans is not set
 # CONFIG_PACKAGE_luci-i18n-openvpn-ca is not set
 # CONFIG_PACKAGE_luci-i18n-openvpn-cs is not set
 # CONFIG_PACKAGE_luci-i18n-openvpn-de is not set
@@ -5620,11 +5626,9 @@ CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-shairplay-ja is not set
 # CONFIG_PACKAGE_luci-i18n-shairplay-pt-br is not set
 # CONFIG_PACKAGE_luci-i18n-shairplay-ru is not set
-# CONFIG_PACKAGE_luci-i18n-simple-adblock-ja is not set
-# CONFIG_PACKAGE_luci-i18n-simple-adblock-pt is not set
-# CONFIG_PACKAGE_luci-i18n-simple-adblock-pt-br is not set
-# CONFIG_PACKAGE_luci-i18n-simple-adblock-ru is not set
-# CONFIG_PACKAGE_luci-i18n-simple-adblock-sv is not set
+# CONFIG_PACKAGE_luci-i18n-shortcutmenu-zh-Hans is not set
+CONFIG_PACKAGE_luci-i18n-shortcutmenu-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-shortcutmenu-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-smartdns-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-socat-zh-cn=y
@@ -5661,12 +5665,15 @@ CONFIG_PACKAGE_luci-i18n-softethervpn-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-sqm-vi is not set
 CONFIG_PACKAGE_luci-i18n-sqm-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-sqm-zh-tw is not set
+CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-ssr-plus-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-tcpdump-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-tcpdump-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-timecontrol-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-timecontrol-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-turboacc-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-udpxy-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-uhttpd-ja is not set
 # CONFIG_PACKAGE_luci-i18n-uhttpd-pt-br is not set
 # CONFIG_PACKAGE_luci-i18n-uhttpd-ru is not set
@@ -5699,7 +5706,6 @@ CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-uugamebooster-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-vpnbypass-pt-br is not set
 # CONFIG_PACKAGE_luci-i18n-vpnbypass-ru is not set
@@ -5943,8 +5949,6 @@ CONFIG_PACKAGE_curl=y
 # CONFIG_PACKAGE_gnurl is not set
 CONFIG_PACKAGE_go-aliyundrive-webdav=y
 CONFIG_PACKAGE_gowebdav=y
-# CONFIG_GOWEBDAV_COMPRESS_GOPROXY is not set
-CONFIG_GOWEBDAV_COMPRESS_UPX=y
 # CONFIG_PACKAGE_lftp is not set
 # CONFIG_PACKAGE_ps3netsrv is not set
 CONFIG_PACKAGE_rclone=y
@@ -7081,9 +7085,7 @@ CONFIG_PACKAGE_udpxy=y
 # CONFIG_PACKAGE_usbip is not set
 # CONFIG_PACKAGE_usteer is not set
 CONFIG_PACKAGE_uugamebooster=y
-CONFIG_PACKAGE_v2ray-core=y
-# CONFIG_PACKAGE_v2ray-example is not set
-CONFIG_PACKAGE_v2ray-extra=y
+# CONFIG_PACKAGE_v2ray-core is not set
 # CONFIG_PACKAGE_vallumd is not set
 # CONFIG_PACKAGE_verysync is not set
 CONFIG_PACKAGE_vlmcsd=y
@@ -7149,6 +7151,7 @@ CONFIG_LAME-LIB_OPTIMIZE_SPEED=y
 # CONFIG_PACKAGE_portaudio is not set
 # CONFIG_PACKAGE_pulseaudio-daemon is not set
 # CONFIG_PACKAGE_pulseaudio-daemon-avahi is not set
+# CONFIG_PACKAGE_rtpmidid is not set
 CONFIG_PACKAGE_shairplay=y
 # CONFIG_PACKAGE_shairport-sync-mbedtls is not set
 # CONFIG_PACKAGE_shairport-sync-mini is not set
@@ -7158,6 +7161,7 @@ CONFIG_PACKAGE_shairport-sync-openssl=y
 # CONFIG_PACKAGE_squeezelite-full is not set
 # CONFIG_PACKAGE_squeezelite-mini is not set
 # CONFIG_PACKAGE_svox is not set
+# CONFIG_PACKAGE_ttymidi-sysex is not set
 # CONFIG_PACKAGE_upmpdcli is not set
 # end of Sound
 
@@ -7710,7 +7714,7 @@ CONFIG_DOCKER_STO_BTRFS=y
 # CONFIG_PACKAGE_fbtest is not set
 # CONFIG_PACKAGE_fdt-utils is not set
 CONFIG_PACKAGE_file=y
-# CONFIG_PACKAGE_filebrowser is not set
+CONFIG_PACKAGE_filebrowser=y
 # CONFIG_PACKAGE_findutils is not set
 # CONFIG_PACKAGE_findutils-find is not set
 # CONFIG_PACKAGE_findutils-locate is not set
@@ -7816,6 +7820,7 @@ CONFIG_PACKAGE_mmc-utils=y
 # CONFIG_PACKAGE_mosh-server is not set
 CONFIG_PACKAGE_mount-utils=y
 # CONFIG_PACKAGE_mpack is not set
+# CONFIG_PACKAGE_mqttled is not set
 # CONFIG_PACKAGE_mt-st is not set
 # CONFIG_PACKAGE_namei is not set
 # CONFIG_PACKAGE_naywatch is not set
@@ -7926,6 +7931,8 @@ CONFIG_PACKAGE_TAR_XZ=y
 CONFIG_PACKAGE_TAR_ZSTD=y
 # CONFIG_PACKAGE_taskset is not set
 # CONFIG_PACKAGE_taskwarrior is not set
+# CONFIG_PACKAGE_telegraf is not set
+# CONFIG_PACKAGE_telegraf-full is not set
 # CONFIG_PACKAGE_telldus-core is not set
 # CONFIG_PACKAGE_temperusb is not set
 # CONFIG_PACKAGE_tesseract is not set
@@ -8004,4 +8011,4 @@ CONFIG_PACKAGE_watchcat=y
 # end of Font-Utils
 # end of Xorg
 
-CONFIG_OVERRIDE_PKGS="UnblockNeteaseMusic UnblockNeteaseMusic-Go adguardhome aliyundrive-fuse aliyundrive-webdav amule antileech aria2 baidupcs-web dns2socks dnsforwarder dnsproxy gmediarender go-aliyundrive-webdav haproxy ipt2socks libcups luci-app-aliyundrive-fuse luci-app-aliyundrive-webdav luci-app-amule luci-app-autoreboot luci-app-baidupcs-web luci-app-diskman luci-app-dockerman luci-app-easymesh luci-app-guest-wifi luci-app-ipsec-server luci-app-kodexplorer luci-app-netdata luci-app-nft-qos luci-app-pppoe-relay luci-app-pptp-server luci-app-pushbot luci-app-ramfree luci-app-serverchan luci-app-socat luci-app-softethervpn luci-app-verysync luci-app-xlnetacc microsocks miniupnpd mosdns msmtp mwan3 nps pdnsd-alt qBittorrent qBittorrent-static qtbase qttools rblibtorrent redsocks2 shadowsocks-libev smartdns tcpping uugamebooster verysync wxbase"
+CONFIG_OVERRIDE_PKGS="UnblockNeteaseMusic UnblockNeteaseMusic-Go adguardhome aliyundrive-fuse aliyundrive-webdav amule antileech aria2 baidupcs-web dns2socks dnsforwarder dnsproxy gmediarender go-aliyundrive-webdav haproxy ipt2socks libcups luci-app-aliyundrive-fuse luci-app-aliyundrive-webdav luci-app-amule luci-app-autoreboot luci-app-baidupcs-web luci-app-diskman luci-app-dockerman luci-app-easymesh luci-app-guest-wifi luci-app-ipsec-server luci-app-kodexplorer luci-app-netdata luci-app-nft-qos luci-app-pppoe-relay luci-app-pptp-server luci-app-pushbot luci-app-ramfree luci-app-serverchan luci-app-socat luci-app-softethervpn luci-app-verysync luci-app-xlnetacc microsocks miniupnpd mosdns msmtp mwan3 nft-qos nps pdnsd-alt qBittorrent qBittorrent-static qtbase qttools rblibtorrent redsocks2 shadowsocks-libev smartdns tcpping uugamebooster verysync wxbase"
