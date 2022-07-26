@@ -5098,7 +5098,7 @@ CONFIG_PACKAGE_luci-app-iptvhelper=y
 CONFIG_PACKAGE_luci-app-minidlna=y
 CONFIG_PACKAGE_luci-app-minieap=y
 CONFIG_PACKAGE_luci-app-mjpg-streamer=y
-# CONFIG_PACKAGE_luci-app-mosdns is not set
+CONFIG_PACKAGE_luci-app-mosdns=y
 CONFIG_PACKAGE_luci-app-music-remote-center=y
 CONFIG_PACKAGE_luci-app-mwan3=y
 CONFIG_PACKAGE_luci-app-mwan3helper=y
@@ -5121,6 +5121,7 @@ CONFIG_PACKAGE_luci-app-ocserv=y
 # CONFIG_PACKAGE_luci-app-olsr is not set
 # CONFIG_PACKAGE_luci-app-olsr-services is not set
 # CONFIG_PACKAGE_luci-app-olsr-viz is not set
+# CONFIG_PACKAGE_luci-app-onliner is not set
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-openvpn=y
 CONFIG_PACKAGE_luci-app-openvpn-server=y
@@ -5368,7 +5369,6 @@ CONFIG_PACKAGE_luci-i18n-aliyundrive-fuse-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-aliyundrive-webdav-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-aliyundrive-webdav-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-amlogic-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-amlogic-zh_Hans is not set
 # CONFIG_PACKAGE_luci-i18n-argon-config-es is not set
 CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-argon-config-zh_Hans is not set
@@ -5540,6 +5540,8 @@ CONFIG_PACKAGE_luci-i18n-minidlna-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-mjpg-streamer-pt-br is not set
 # CONFIG_PACKAGE_luci-i18n-mjpg-streamer-ru is not set
 CONFIG_PACKAGE_luci-i18n-mjpg-streamer-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-mosdns-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-mosdns-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-music-remote-center-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-mwan3-ja is not set
 # CONFIG_PACKAGE_luci-i18n-mwan3-ru is not set
@@ -6173,7 +6175,7 @@ CONFIG_PACKAGE_dns2tcp=y
 # CONFIG_PACKAGE_mdns-utils is not set
 # CONFIG_PACKAGE_mdnsd is not set
 # CONFIG_PACKAGE_mdnsresponder is not set
-# CONFIG_PACKAGE_mosdns is not set
+CONFIG_PACKAGE_mosdns=y
 # CONFIG_PACKAGE_nsd is not set
 # CONFIG_PACKAGE_nsd-control is not set
 # CONFIG_PACKAGE_nsd-control-setup is not set
@@ -8008,4 +8010,4 @@ CONFIG_PACKAGE_watchcat=y
 # end of Font-Utils
 # end of Xorg
 
-CONFIG_OVERRIDE_PKGS="UnblockNeteaseMusic UnblockNeteaseMusic-Go adguardhome aliyundrive-fuse aliyundrive-webdav amule antileech aria2 baidupcs-web dns2socks dnsforwarder dnsproxy gmediarender go-aliyundrive-webdav haproxy ipt2socks libcups luci-app-aliyundrive-fuse luci-app-aliyundrive-webdav luci-app-amule luci-app-autoreboot luci-app-baidupcs-web luci-app-diskman luci-app-dockerman luci-app-easymesh luci-app-guest-wifi luci-app-ipsec-server luci-app-kodexplorer luci-app-netdata luci-app-nft-qos luci-app-pppoe-relay luci-app-pptp-server luci-app-pushbot luci-app-ramfree luci-app-serverchan luci-app-socat luci-app-softethervpn luci-app-verysync luci-app-xlnetacc microsocks miniupnpd mosdns msmtp mwan3 nft-qos nps pdnsd-alt qBittorrent qBittorrent-static qtbase qttools rblibtorrent redsocks2 shadowsocks-libev smartdns tcpping uugamebooster verysync wxbase"
+CONFIG_OVERRIDE_PKGS="UnblockNeteaseMusic UnblockNeteaseMusic-Go adguardhome aliyundrive-fuse aliyundrive-webdav amule antileech aria2 baidupcs-web dns2socks dnsforwarder dnsproxy gmediarender go-aliyundrive-webdav haproxy ipt2socks libcups luci-app-aliyundrive-fuse luci-app-aliyundrive-webdav luci-app-amule luci-app-autoreboot luci-app-baidupcs-web luci-app-diskman luci-app-dockerman luci-app-easymesh luci-app-guest-wifi luci-app-ipsec-server luci-app-kodexplorer luci-app-netdata luci-app-nft-qos luci-app-pppoe-relay luci-app-pptp-server luci-app-pushbot luci-app-ramfree luci-app-serverchan luci-app-socat luci-app-softethervpn luci-app-verysync luci-app-xlnetacc luci-theme-argon microsocks miniupnpd mosdns msmtp mwan3 nft-qos nps pdnsd-alt qBittorrent qBittorrent-static qtbase qttools rblibtorrent redsocks2 shadowsocks-libev smartdns tcpping uugamebooster verysync wxbase"
