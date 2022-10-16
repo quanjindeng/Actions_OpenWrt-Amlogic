@@ -52,7 +52,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-unblocknetease
 
 # 删除重复包
 
-rm -rf feeds/luci/applications/luci-app-netdata
+# rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf package/small-package/luci-app-openvpn-server
 rm -rf package/small-package/openvpn-easy-rsa-whisky
