@@ -85,5 +85,5 @@ sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-moun
 #sed -i 's#<%+cbi/tabmenu%>##g' package/small-packages/luci-app-nginx-manager/luasrc/view/nginx-manager/index.htm
 
 # 为alist插件更换最新的golang版本
-rm -rf feeds/packages/lang/golang
-svn export https://github.com/sbwml/packages_lang_golang/trunk feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# svn export https://github.com/sbwml/packages_lang_golang/trunk feeds/packages/lang/golang
