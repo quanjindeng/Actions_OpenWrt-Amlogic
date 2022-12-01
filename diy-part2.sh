@@ -90,4 +90,4 @@ sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-moun
 
 # 替换python3软件包
 rm -rf feeds/packages/lang/python
-svn export https://github.com/immortalwrt/packages/trunk/lang/python feeds/packages/lang/python
+svn co https://github.com/immortalwrt/packages/trunk/lang/python feeds/packages/lang/python
