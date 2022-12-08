@@ -5,6 +5,7 @@
 
 ## 感谢
 - [Lean's OpenWrt 源码仓库](https://github.com/coolsnowwolf/lede)
+- [immortalwrt's OpenWrt 源码仓库](https://github.com/immortalwrt/immortalwrt)
 - [flippy 内核与打包脚本](https://github.com/unifreq/openwrt_packit)
 - [ophub 内核打包参数说明](https://github.com/ophub/amlogic-s9xxx-openwrt/blob/main/README.cn.md#%E4%BD%BF%E7%94%A8-github-actions-%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%AF%91)
 - [kenzok8 软件包收集仓库](https://github.com/kenzok8/small-package)
