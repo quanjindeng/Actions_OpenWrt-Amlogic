@@ -87,7 +87,3 @@ sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-moun
 # 为alist插件更换最新的golang版本
 # rm -rf feeds/packages/lang/golang
 # svn export https://github.com/sbwml/packages_lang_golang/trunk feeds/packages/lang/golang
-
-# 临时修复python3编译报错
-sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=4.8/g' tools/sed/Makefile
-sed -i 's/PKG_HASH:=.*/PKG_HASH:=f79b0cfea71b37a8eeec8490db6c5f7ae7719c35587f21edb0617f370eeff633/g' tools/sed/Makefile
