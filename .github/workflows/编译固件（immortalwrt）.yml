@@ -157,7 +157,8 @@ jobs:
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          测试固件，使用https://github.com/immortalwrt/immortalwrt源码编译。
+          测试固件，使用 https://github.com/immortalwrt/immortalwrt 源码编译。
+          若非必要，不要下载！
           
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
