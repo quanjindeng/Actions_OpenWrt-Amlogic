@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: 0 16 * * 4
+    - cron: 0 16 15 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -178,6 +178,7 @@ jobs:
           精简版（含iStore插件）固件！
           精简版（含iStore插件）固件！
           精简版（含iStore插件）固件！
+          更新频率：`每月一次`
           
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
