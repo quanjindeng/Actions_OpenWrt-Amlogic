@@ -175,9 +175,10 @@ jobs:
           * **N1云编译OP固件互助交流群：**
           https://t.me/OpenWrt_n1
           * **提示：**
-          精简版（含iStore插件）固件！
-          精简版（含iStore插件）固件！
-          精简版（含iStore插件）固件！
+          建议自行添加iStore的软件源，并在软件源配置里禁用`# option check_signature`，之后刷新一下软件列表
+          自定义软件源：
+          `src/gz is_nas_luci https://istore.linkease.com/repo/all/nas_luci`
+          `src/gz is_store https://istore.linkease.com/repo/all/store`
           更新频率：`每月一次`
           
     - name: 清理Actions空间
