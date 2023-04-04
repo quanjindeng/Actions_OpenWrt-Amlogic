@@ -7371,7 +7371,7 @@ CONFIG_SOCAT_SSL=y
 # CONFIG_PACKAGE_speedtest-netperf is not set
 # CONFIG_PACKAGE_speedtest-web is not set
 # CONFIG_SPEEDTEST_WEB_COMPRESS_GOPROXY is not set
-CONFIG_SPEEDTEST_WEB_COMPRESS_UPX=y
+# CONFIG_SPEEDTEST_WEB_COMPRESS_UPX is not set
 # CONFIG_PACKAGE_spoofer is not set
 # CONFIG_PACKAGE_ssocks is not set
 # CONFIG_PACKAGE_ssocksd is not set
