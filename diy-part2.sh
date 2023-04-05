@@ -64,6 +64,8 @@ rm -rf package/small-package/luci-app-argon*
 rm -rf package/small-package/luci-theme-argon*
 rm -rf package/small-package/luci-app-amlogic
 rm -rf package/small-package/luci-app-unblockneteasemusic
+rm -rf package/small-package/upx-static
+rm -rf package/small-package/upx
 
 
 # 其他调整
