@@ -56,6 +56,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
+        sudo apt update -y
         # 清理多余文件，腾出磁盘空间
         docker rmi `docker images -q`
         sudo apt purge -y dash perl nuget pip pipx rubygems yarn maven ansible \
@@ -69,7 +70,6 @@ jobs:
         sudo rm -rf /etc/mysql /etc/php /swapfile
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         # 安装软件包
-        sudo apt update -y
         sudo apt full-upgrade -y
         sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
         bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib \
