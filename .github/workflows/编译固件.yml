@@ -73,7 +73,20 @@ jobs:
         sudo chown $USER:$GROUPS /workdir
         # 清理多余文件，腾出磁盘空间
         docker rmi `docker images -q`
-        sudo -E apt-get remove -y --purge azure-cli ghc zulu* llvm* firefox google* dotnet* powershell mysql* php* android*
+        sudo -E apt-get remove -y --purge  clang* dash julia kotin \
+        helm perl homebrew miniconda nuget pip pip3 pipx rubygems \
+        vcpkg yarn lerna maven ansible apt-fast azcopy bazel bazelisk \
+        bicep buildah docker* fastlane haveged heroku jq kind kubectl \
+        kustomize leiningen mediainfo mercurial minikube n newman nvm \
+        packer parcel podman pulumi r skopeo svn terraform yamllint yq \
+        zstd alibaba* aws* azure* google* hub* netlify* openshift* oras* \
+        vercel* java* php* ghc ghcup zulu* llvm* firefox dotnet* powershell \
+        mysql* android* composer* cabal stack cargo rust rustdoc rustup \
+        bindgen cargo* cbindgen rustfmt chrome* chromium* microsoft* nbgv \
+        sqlite postgresql sqlcmd sqlpackage pypy az markdown* pester \
+        psscript* apache2 nginx cmake ndk* sdk* acl aira2 autoconf \
+        brotli coreutils dbus dnsutils dpkg dpkg-dev file ftp gnupg2 \
+        haveged image* iproute2 iputils-ping mono msbuild ruby swift cpan
         sudo rm -rf /etc/mysql /etc/php /swapfile
 
     - name: 克隆源码
