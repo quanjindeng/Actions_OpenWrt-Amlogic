@@ -61,12 +61,12 @@ jobs:
         docker rmi `docker images -q`
         sudo apt-get remove -y --purge dash perl nuget pip pipx rubygems yarn maven ansible \
         buildah haveged jq leiningen mediainfo mercurial \
-        packer podman skopeo yamllint zstd hub* openshift* \
-        azure-cli ghc zulu* llvm* firefox google* dotnet* powershell mysql* php* android* \
-        composer* cargo bindgen cargo* cbindgen rustfmt microsoft* \
+        podman skopeo yamllint zstd hub* openshift* \
+        azure-cli ghc zulu* firefox powershell \
+        composer* cargo bindgen cbindgen \
         sqlite postgresql pypy markdown* apache2 nginx cmake sdk* acl autoconf \
         brotli coreutils dbus dnsutils file ftp gnupg2 \
-        haveged image* iproute2 iputils-ping msbuild ruby swift 
+        haveged image* iproute2 iputils-ping msbuild ruby
         sudo rm -rf /etc/mysql /etc/php /swapfile
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         # 安装软件包
