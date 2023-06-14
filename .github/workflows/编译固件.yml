@@ -28,7 +28,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
@@ -58,10 +58,9 @@ jobs:
       run: |
         # 清理多余文件，腾出磁盘空间
         docker rmi `docker images -q`
-        sudo -E apt-get remove -y --purge  clang* dash julia \
-        perl nuget pip pipx rubygems yarn maven ansible \
-        buildah docker* haveged jq kubectl leiningen mediainfo mercurial \
-        packer podman skopeo svn yamllint zstd aws* google* hub* openshift* oras* \
+        sudo apt purge -y dash perl nuget pip pipx rubygems yarn maven ansible \
+        buildah haveged jq leiningen mediainfo mercurial \
+        packer podman skopeo yamllint zstd hub* openshift* \
         java* php* ghc zulu* llvm* firefox zaure* powershell \
         mysql* android* composer* cargo \
         bindgen cargo* cbindgen rustfmt chrome* chromium* microsoft* \
