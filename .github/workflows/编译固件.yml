@@ -80,7 +80,7 @@ jobs:
         leiningen mediainfo mercurial \
         packer podman skopeo svn yamllint \
         zstd aws* google* hub* openshift* oras* \
-        java* php* ghc zulu* llvm* firefox dotnet* powershell \
+        java* php* ghc zulu* llvm* firefox zaure* powershell \
         mysql* android* composer* cargo \
         bindgen cargo* cbindgen rustfmt chrome* chromium* microsoft* \
         sqlite postgresql pypy markdown* \
