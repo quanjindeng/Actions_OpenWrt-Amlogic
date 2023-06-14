@@ -56,7 +56,21 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
+        # 清理多余文件，腾出磁盘空间
+        docker rmi `docker images -q`
+        sudo -E apt-get remove -y --purge  clang* dash julia \
+        perl nuget pip pipx rubygems yarn maven ansible \
+        buildah docker* haveged jq kubectl leiningen mediainfo mercurial \
+        packer podman skopeo svn yamllint zstd aws* google* hub* openshift* oras* \
+        java* php* ghc zulu* llvm* firefox zaure* powershell \
+        mysql* android* composer* cargo \
+        bindgen cargo* cbindgen rustfmt chrome* chromium* microsoft* \
+        sqlite postgresql pypy markdown* apache2 nginx cmake ndk* sdk* acl autoconf \
+        brotli coreutils dbus dnsutils file ftp gnupg2 \
+        haveged image* iproute2 iputils-ping msbuild ruby swift
+        sudo rm -rf /etc/mysql /etc/php /swapfile
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        # 安装软件包
         sudo apt update -y
         sudo apt full-upgrade -y
         sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
@@ -71,23 +85,6 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        # 清理多余文件，腾出磁盘空间
-        docker rmi `docker images -q`
-        sudo -E apt-get remove -y --purge  clang* dash julia \
-        perl nuget pip pipx rubygems \
-        yarn maven ansible \
-        buildah docker* haveged jq kubectl \
-        leiningen mediainfo mercurial \
-        packer podman skopeo svn yamllint \
-        zstd aws* google* hub* openshift* oras* \
-        java* php* ghc zulu* llvm* firefox zaure* powershell \
-        mysql* android* composer* cargo \
-        bindgen cargo* cbindgen rustfmt chrome* chromium* microsoft* \
-        sqlite postgresql pypy markdown* \
-        apache2 nginx cmake ndk* sdk* acl autoconf \
-        brotli coreutils dbus dnsutils file ftp gnupg2 \
-        haveged image* iproute2 iputils-ping msbuild ruby swift
-        sudo rm -rf /etc/mysql /etc/php /swapfile
 
     - name: 克隆源码
       working-directory: /workdir
