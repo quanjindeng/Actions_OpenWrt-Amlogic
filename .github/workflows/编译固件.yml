@@ -73,15 +73,15 @@ jobs:
         sudo chown $USER:$GROUPS /workdir
         # 清理多余文件，腾出磁盘空间
         docker rmi `docker images -q`
-        sudo -E apt-get remove -y --purge  clang* dash julia kotin \
+        sudo -E apt-get remove -y --purge  clang* dash julia \
         perl nuget pip pipx rubygems \
         yarn maven ansible \
         buildah docker* haveged jq kubectl \
         leiningen mediainfo mercurial \
         packer podman skopeo svn yamllint \
         zstd aws* azure* google* hub* openshift* oras* \
-        java* php* ghc ghcup zulu* llvm* firefox dotnet* powershell \
-        mysql* android* composer* cabal cargo \
+        java* php* ghc zulu* llvm* firefox dotnet* powershell \
+        mysql* android* composer* cargo \
         bindgen cargo* cbindgen rustfmt chrome* chromium* microsoft* \
         sqlite postgresql pypy markdown* \
         apache2 nginx cmake ndk* sdk* acl autoconf \
