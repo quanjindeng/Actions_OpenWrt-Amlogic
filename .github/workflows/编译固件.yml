@@ -61,12 +61,11 @@ jobs:
         sudo apt purge -y dash perl nuget pip pipx rubygems yarn maven ansible \
         buildah haveged jq leiningen mediainfo mercurial \
         packer podman skopeo yamllint zstd hub* openshift* \
-        java* php* ghc zulu* llvm* firefox zaure* powershell \
-        mysql* android* composer* cargo \
-        bindgen cargo* cbindgen rustfmt chrome* chromium* microsoft* \
-        sqlite postgresql pypy markdown* apache2 nginx cmake ndk* sdk* acl autoconf \
+        azure-cli ghc zulu* llvm* firefox google* dotnet* powershell mysql* php* android* \
+        composer* cargo bindgen cargo* cbindgen rustfmt microsoft* \
+        sqlite postgresql pypy markdown* apache2 nginx cmake sdk* acl autoconf \
         brotli coreutils dbus dnsutils file ftp gnupg2 \
-        haveged image* iproute2 iputils-ping msbuild ruby swift
+        haveged image* iproute2 iputils-ping msbuild ruby swift 
         sudo rm -rf /etc/mysql /etc/php /swapfile
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         # 安装软件包
