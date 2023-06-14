@@ -85,7 +85,7 @@ jobs:
         bindgen cargo* cbindgen rustfmt chrome* chromium* microsoft* \
         sqlite postgresql pypy markdown* \
         apache2 nginx cmake ndk* sdk* acl autoconf \
-        brotli coreutils dbus dnsutils dpkg dpkg-dev file ftp gnupg2 \
+        brotli coreutils dbus dnsutils file ftp gnupg2 \
         haveged image* iproute2 iputils-ping msbuild ruby swift
         sudo rm -rf /etc/mysql /etc/php /swapfile
 
