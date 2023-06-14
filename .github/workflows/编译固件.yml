@@ -79,7 +79,7 @@ jobs:
         buildah docker* haveged jq kubectl \
         leiningen mediainfo mercurial \
         packer podman skopeo svn yamllint \
-        zstd aws* azure* google* hub* openshift* oras* \
+        zstd aws* google* hub* openshift* oras* \
         java* php* ghc zulu* llvm* firefox dotnet* powershell \
         mysql* android* composer* cargo \
         bindgen cargo* cbindgen rustfmt chrome* chromium* microsoft* \
