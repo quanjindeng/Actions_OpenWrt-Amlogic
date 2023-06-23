@@ -33,6 +33,10 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+    - name: 创建编译空间挂载点
+      run: |
+        sudo mkdir -p /workdir
+      
     - name: 最大化编译空间
       uses: easimon/maximize-build-space@master
       with:
@@ -45,7 +49,7 @@ jobs:
         remove-codeql: 'true'
         remove-docker-images: 'true'
           
-    - name: Checkout
+    - name: actions检查
       uses: actions/checkout@v3
     
     - name: 检查服务器配置
