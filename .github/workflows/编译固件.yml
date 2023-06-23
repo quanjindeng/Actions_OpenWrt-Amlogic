@@ -7,6 +7,8 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
 #
+# 优化调整 by https://github.com/quanjindeng/Actions_OpenWrt-Amlogic
+#
 
 name: 编译固件
 
