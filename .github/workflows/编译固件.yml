@@ -38,6 +38,7 @@ jobs:
       with:
         root-reserve-mb: 512
         swap-size-mb: 1024
+        build-mount-path: /workdir
         remove-dotnet: 'true'
         remove-android: 'true'
         remove-haskell: 'true'
@@ -81,7 +82,6 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
-        sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
     - name: 克隆源码
