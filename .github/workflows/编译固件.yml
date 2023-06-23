@@ -51,7 +51,7 @@ jobs:
         remove-codeql: 'true'
         remove-docker-images: 'true'
           
-    - name: actions检查
+    - name: 检查Actions
       uses: actions/checkout@v3
     
     - name: 检查服务器配置
