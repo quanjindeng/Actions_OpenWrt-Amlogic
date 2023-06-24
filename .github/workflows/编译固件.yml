@@ -41,7 +41,7 @@ jobs:
     - name: 最大化编译空间
       uses: easimon/maximize-build-space@master
       with:
-        root-reserve-mb: 512
+        root-reserve-mb: 4096
         swap-size-mb: 1024
         build-mount-path: /workdir
         overprovision-lvm: 'true'
