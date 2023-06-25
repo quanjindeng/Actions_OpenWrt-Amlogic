@@ -41,7 +41,7 @@ jobs:
     - name: 最大化编译空间
       uses: easimon/maximize-build-space@master
       with:
-        root-reserve-mb: 4096
+        root-reserve-mb: 2048
         swap-size-mb: 1024
         build-mount-path: /workdir
         overprovision-lvm: 'false'
@@ -145,37 +145,40 @@ jobs:
       run: |
         echo "清理之前："
         df -hT
-        mkdir openwrt-armvirt
-        mv openwrt/bin/targets/*/*/*.tar.gz openwrt-armvirt/
+        mkdir /workdir/openwrt-armvirt
+        mv openwrt/bin/targets/*/*/*.tar.gz /workdir/openwrt-armvirt/
         echo -e "\n"
         echo "列出空间占用前10的目录或文件："
-        sudo du -h --max-depth=1 /workdir/openwrt |sort -nr | head -10
-        rm -rf /workdir/openwrt/*
+        sudo du -h --max-depth=1 /workdir |sort -nr | head -10
+        rm -rf /workdir/openwrt/
         echo -e "\n"
         echo "清理之后："
         df -hT
         echo -e "\n"
-        echo "当前路径文件"
+        echo "/workdir路径文件"
         ls -l
         echo -e "\n"
         echo "列出空间占用前10的目录或文件："
-        sudo du -h --max-depth=1 /workdir/openwrt |sort -nr | head -10
+        sudo du -h --max-depth=1 /workdir |sort -nr | head -10
 
     - name: 打包内核
       uses: unifreq/openwrt_packit@master
       env:
         WHOAMI: deng
-        OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
+        OPENWRT_ARMVIRT: /workdir/openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
        # KERNEL_AUTO_LATEST: false
        # KERNEL_REPO_URL: https://github.com/quanjindeng/Actions_OpenWrt-Amlogic/tree/main/kernel
         KERNEL_VERSION_NAME: 5.15.105_6.1.22
-
+        
+    - name: 整理上传文件
+      run: mv /opt/openwrt_packit/output/* /workdir/openwrt-armvirt/
+      
     - name: 发布固件
       uses: ncipollo/release-action@v1
       with:
         tag: openwrt_armvirt_v8_${{ env.PACKAGED_OUTPUTDATE }}
-        artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
+        artifacts: /workdir/openwrt-armvirt/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
