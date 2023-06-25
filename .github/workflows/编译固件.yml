@@ -171,7 +171,7 @@ jobs:
        # KERNEL_REPO_URL: https://github.com/quanjindeng/Actions_OpenWrt-Amlogic/tree/main/kernel
         KERNEL_VERSION_NAME: 5.15.105_6.1.22
         
-    - name: 整理上传文件
+    - name: 整理文件
       run: mv /opt/openwrt_packit/output/* /workdir/openwrt-armvirt/
       
     - name: 发布固件
