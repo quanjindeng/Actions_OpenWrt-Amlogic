@@ -44,7 +44,7 @@ jobs:
         root-reserve-mb: 2048
         swap-size-mb: 1024
         build-mount-path: /workdir
-        overprovision-lvm: 'false'
+        overprovision-lvm: 'true'
         remove-dotnet: 'true'
         remove-android: 'true'
         remove-haskell: 'true'
