@@ -145,8 +145,10 @@ jobs:
       run: |
         echo "清理之前："
         df -hT
-        mkdir /workdir/openwrt-armvirt
-        mv openwrt/bin/targets/*/*/*.tar.gz /workdir/openwrt-armvirt/
+        mkdir openwrt-armvirt
+        mkdir /workdir/upload
+        cp openwrt/bin/targets/*/*/*.tar.gz /workdir/upload/
+        mv openwrt/bin/targets/*/*/*.tar.gz openwrt-armvirt/
         echo -e "\n"
         echo "列出空间占用前10的目录或文件："
         sudo du -h --max-depth=1 /workdir |sort -nr | head -10
@@ -165,20 +167,20 @@ jobs:
       uses: unifreq/openwrt_packit@master
       env:
         WHOAMI: deng
-        OPENWRT_ARMVIRT: /workdir/openwrt-armvirt/*.tar.gz
+        OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
        # KERNEL_AUTO_LATEST: false
        # KERNEL_REPO_URL: https://github.com/quanjindeng/Actions_OpenWrt-Amlogic/tree/main/kernel
         KERNEL_VERSION_NAME: 5.15.105_6.1.22
         
     - name: 整理文件
-      run: mv /opt/openwrt_packit/output/* /workdir/openwrt-armvirt/
+      run: mv /opt/openwrt_packit/output/* /workdir/upload/
       
     - name: 发布固件
       uses: ncipollo/release-action@v1
       with:
         tag: openwrt_armvirt_v8_${{ env.PACKAGED_OUTPUTDATE }}
-        artifacts: /workdir/openwrt-armvirt/*
+        artifacts: /workdir/upload/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
