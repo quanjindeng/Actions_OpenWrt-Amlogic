@@ -1,4 +1,4 @@
-name: 编译固件（自用）
+name: 编译固件（tag）
 
 on:
   repository_dispatch:
@@ -10,6 +10,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
+  REPO_TAG: 20230609
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config-tiny
   DIY_P1_SH: diy-part1.sh
@@ -70,7 +71,8 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        #git clone $REPO_URL -b $REPO_BRANCH openwrt
+        git clone --branch $REPO_TAG   $REPO_URL   openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: 加载自定义feeds
