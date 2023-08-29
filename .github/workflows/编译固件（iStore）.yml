@@ -134,7 +134,7 @@ jobs:
         echo -e "\n"
         echo "列出空间占用前10的目录或文件："
         sudo du -h --max-depth=1 /workdir/openwrt |sort -nr | head -10
-        rm -rf /workdir/openwrt/*
+        rm -rf /workdir/openwrt/* && sync
         echo -e "\n"
         echo "清理之后："
         df -hT
