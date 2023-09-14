@@ -88,10 +88,13 @@ sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-moun
 
 #sed -i 's#<%+cbi/tabmenu%>##g' package/small-packages/luci-app-nginx-manager/luasrc/view/nginx-manager/index.htm
 
-# 为alist插件更换最新的golang版本
+# alist插件修复
 # rm -rf feeds/packages/lang/golang
 # svn export https://github.com/sbwml/packages_lang_golang/trunk feeds/packages/lang/golang
-rm -rf package/small-package/alist/patches/001-disable-delete-of-temp-directory-at-startup.patch
+# rm -rf package/small-package/alist/patches/001-disable-delete-of-temp-directory-at-startup.patch
+curl -o ./feeds/packages/lang/rust/rust-values.mk https://raw.githubusercontent.com/Jason6111/packages/patch-1/lang/rust/rust-values.mk
+curl -o ./feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/Jason6111/OpenWrt_Personal/main/other/rust/Makefile
+curl -o ./feeds/packages/lang/rust/patches/0001-Update-xz2-and-use-it-static.patch https://raw.githubusercontent.com/Jason6111/OpenWrt_Personal/main/other/rust/0001-Update-xz2-and-use-it-static.patch
 
 # mosdns
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
