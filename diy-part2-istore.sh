@@ -70,7 +70,8 @@ rm -rf package/small-package/upx-static
 rm -rf package/small-package/upx
 rm -rf package/small-package/firewall*
 rm -rf package/small-package/opkg
-
+rm -rf package/feeds/packages/aliyundrive-webdav
+rm -rf feeds/packages/multimedia/aliyundrive-webdav
 # 其他调整
 NAME=$"package/luci-app-unblockneteasemusic/root/usr/share/unblockneteasemusic" && mkdir -p $NAME/core
 curl 'https://api.github.com/repos/UnblockNeteaseMusic/server/commits?sha=enhanced&path=precompiled' -o commits.json
