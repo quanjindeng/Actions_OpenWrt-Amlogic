@@ -43,6 +43,7 @@ jobs:
       with:
         root-reserve-mb: 4096
         swap-size-mb: 1024
+        temp-reserve-mb: 200
         build-mount-path: /workdir
         overprovision-lvm: 'true'
         remove-dotnet: 'true'
