@@ -93,10 +93,9 @@ sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-moun
 
 #sed -i 's#<%+cbi/tabmenu%>##g' package/small-packages/luci-app-nginx-manager/luasrc/view/nginx-manager/index.htm
 
-# alist插件修复
+# golang版本修复
 rm -rf feeds/packages/lang/golang
-svn export https://github.com/sbwml/packages_lang_golang/trunk feeds/packages/lang/golang
-# rm -rf package/small-package/alist/patches/001-disable-delete-of-temp-directory-at-startup.patch
+git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
 # mosdns
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
