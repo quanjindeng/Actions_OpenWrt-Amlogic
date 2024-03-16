@@ -6845,8 +6845,6 @@ CONFIG_PACKAGE_softethervpn5-libs=y
 CONFIG_PACKAGE_softethervpn5-server=y
 # CONFIG_PACKAGE_sstp-client is not set
 # CONFIG_PACKAGE_strongswan is not set
-CONFIG_PACKAGE_tailscale=y
-CONFIG_PACKAGE_tailscaled=y
 # CONFIG_PACKAGE_tinc is not set
 # CONFIG_PACKAGE_uanytun is not set
 # CONFIG_PACKAGE_uanytun-nettle is not set
