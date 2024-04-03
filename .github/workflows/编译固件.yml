@@ -172,7 +172,7 @@ jobs:
         PACKAGE_SOC: s905d
        # KERNEL_AUTO_LATEST: false
        # KERNEL_REPO_URL: https://github.com/quanjindeng/Actions_OpenWrt-Amlogic/tree/main/kernel
-        KERNEL_VERSION_NAME: 5.15.105_6.1.22
+        KERNEL_VERSION_NAME: 5.15.105_6.6.1
         
     - name: 整理文件
       run: mv /opt/openwrt_packit/output/* /workdir/upload/
