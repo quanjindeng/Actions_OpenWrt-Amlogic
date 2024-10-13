@@ -5423,7 +5423,6 @@ CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Simple_Obfs=y
 
 # CONFIG_PACKAGE_luci-app-pcimodem is not set
 # CONFIG_PACKAGE_luci-app-penpot is not set
-CONFIG_PACKAGE_luci-app-pgyvpn=y
 # CONFIG_PACKAGE_luci-app-photoprism is not set
 CONFIG_PACKAGE_luci-app-phtunnel=y
 # CONFIG_PACKAGE_luci-app-plex is not set
@@ -6833,7 +6832,6 @@ CONFIG_OPENVPN_openssl_ENABLE_PF=y
 # CONFIG_OPENVPN_openssl_ENABLE_IPROUTE2 is not set
 CONFIG_OPENVPN_openssl_ENABLE_SMALL=y
 # CONFIG_PACKAGE_openvpn-wolfssl is not set
-CONFIG_PACKAGE_pgyvpn=y
 # CONFIG_PACKAGE_pptpd is not set
 # CONFIG_PACKAGE_softethervpn-base is not set
 # CONFIG_PACKAGE_softethervpn-bridge is not set
