@@ -6837,10 +6837,6 @@ CONFIG_OPENVPN_openssl_ENABLE_SMALL=y
 # CONFIG_PACKAGE_softethervpn-bridge is not set
 # CONFIG_PACKAGE_softethervpn-client is not set
 # CONFIG_PACKAGE_softethervpn-server is not set
-CONFIG_PACKAGE_softethervpn5-bridge=y
-CONFIG_PACKAGE_softethervpn5-client=y
-CONFIG_PACKAGE_softethervpn5-libs=y
-CONFIG_PACKAGE_softethervpn5-server=y
 # CONFIG_PACKAGE_sstp-client is not set
 # CONFIG_PACKAGE_strongswan is not set
 # CONFIG_PACKAGE_tinc is not set
