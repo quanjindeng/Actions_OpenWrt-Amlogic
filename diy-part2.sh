@@ -54,9 +54,9 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-unblocknetease
 
 # 删除重复包
 
-rm -rf feeds/luci/applications/luci-app-qbittorrent
-rm -rf feeds/packages/net/qBittorrent-static
-rm -rf feeds/packages/net/qBittorrent
+rm -rf package/small-package/luci-app-qbittorrent
+rm -rf package/small-package/qBittorrent-static
+rm -rf package/small-package/qBittorrent
 # rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf package/small-package/luci-app-openvpn-server
