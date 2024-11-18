@@ -31,8 +31,27 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+    - name: 创建编译空间挂载点
+      run: |
+        sudo mkdir -p /workdir
+        sudo chown $USER:$GROUPS /workdir
+        
+    - name: 最大化编译空间
+      uses: easimon/maximize-build-space@master
+      with:
+        root-reserve-mb: 4096
+        swap-size-mb: 1024
+        temp-reserve-mb: 200
+        build-mount-path: /workdir
+        overprovision-lvm: 'true'
+        remove-dotnet: 'true'
+        remove-android: 'true'
+        remove-haskell: 'true'
+        remove-codeql: 'true'
+        remove-docker-images: 'true'
+          
+    - name: 检查Actions
+      uses: actions/checkout@v4
     
     - name: 检查服务器配置
       run: |
@@ -56,10 +75,9 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
-        sudo apt update -y
-        sudo apt full-upgrade -y
-        sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
+        sudo apt-get update -y
+        sudo apt-get full-upgrade -y
+        sudo apt-get install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
         bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib \
         git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev \
         libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz \
@@ -69,12 +87,8 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
-        # 清理多余文件，腾出磁盘空间
-        #docker rmi `docker images -q`
-        #sudo -E apt-get remove -y --purge azure-cli ghc zulu* llvm* firefox google* dotnet* powershell mysql* php* android*
-        #sudo rm -rf /etc/mysql /etc/php /swapfile
+        echo "硬盘详情："
+        df -Th
         
     - name: 克隆源码
       working-directory: /workdir
@@ -112,6 +126,8 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
+        echo "硬盘详情："
+        df -Th
         
     - name: 编译固件
       id: compile
@@ -130,20 +146,22 @@ jobs:
         echo "清理之前："
         df -hT
         mkdir openwrt-armvirt
+        mkdir /workdir/upload
+        cp openwrt/bin/targets/*/*/*.tar.gz /workdir/upload/
         mv openwrt/bin/targets/*/*/*.tar.gz openwrt-armvirt/
         echo -e "\n"
         echo "列出空间占用前10的目录或文件："
-        sudo du -h --max-depth=1 /workdir/openwrt |sort -nr | head -10
-        rm -rf /workdir/openwrt/* && sync
+        sudo du -h --max-depth=1 /workdir |sort -nr | head -10
+        rm -rf /workdir/openwrt/ && sync
         echo -e "\n"
         echo "清理之后："
         df -hT
         echo -e "\n"
-        echo "当前路径文件"
+        echo "/workdir路径文件"
         ls -l
         echo -e "\n"
         echo "列出空间占用前10的目录或文件："
-        sudo du -h --max-depth=1 /workdir/openwrt |sort -nr | head -10
+        sudo du -h --max-depth=1 /workdir |sort -nr | head -10
         
     - name: 打包内核
       uses: unifreq/openwrt_packit@master
@@ -155,11 +173,14 @@ jobs:
        # KERNEL_REPO_URL: https://github.com/quanjindeng/Actions_OpenWrt-Amlogic/tree/main/kernel
         KERNEL_VERSION_NAME: 5.15.105_6.6.1
 
+    - name: 整理文件
+      run: mv /opt/openwrt_packit/output/* /workdir/upload/
+
     - name: 发布固件
       uses: ncipollo/release-action@v1
       with:
         tag: openwrt_armvirt_iStore_${{ env.PACKAGED_OUTPUTDATE }}
-        artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
+        artifacts: /workdir/upload/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
@@ -197,7 +218,7 @@ jobs:
       uses: dev-drprasad/delete-older-releases@master
       with:
         repo: ${{ github.repository }}
-        keep_latest: 5
+        keep_latest: 6
         #keep_latest: ${{ github.event.inputs.rele }}
         delete_tags: true
       env:
